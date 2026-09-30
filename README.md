@@ -1,14 +1,12 @@
 # OpenWeightModelle.de
 
-Deutschsprachige Referenz für Open-Weight-Modelle.
+Deutschsprachige Referenz für Open-Weight-Modelle, lokale KI, Hardware, Lizenzen, Self-Hosting und Deployment.
 
-- 50 Model-Passports
-- helle, responsive statische Website
-- Modellindex mit Filtern
-- eigene SEO/GEO-Seite pro Modell
-- Canonical, OpenGraph, JSON-LD, FAQPage
-- Sitemap und robots.txt
-- Primärquellen pro Modell
-- Stand: 30. September 2026
+- 64 dokumentierte Modellprofile
+- Länderkennzeichnung auf Modellkarten und ModelPassports
+- geführter Modellfinder für private und professionelle Nutzung
+- Wissensbereich mit 20 ausführlichen SEO-/GEO-Referenzartikeln
+- eigene Infografik pro Wissensartikel
+- strukturierte Daten, Sitemap und llms.txt
 
-GitHub Pages: Dateien im Repository-Root veröffentlichen.
+Stand: 30. September 2026
