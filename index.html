@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenWeightModelle – Offene KI-Modelle vergleichen</title>
+  <meta name="description" content="Deutschsprachige Referenz für Open-Weight-Modelle, lokale KI, Hardware, Lizenzen und Deployment.">
+  <meta name="theme-color" content="#08111f">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-1"></div>
+  <div class="ambient ambient-2"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span>OpenWeightModelle</span>
+    </a>
+    <nav class="main-nav">
+      <a href="#modelle">Modelle</a>
+      <a href="#finder">Finder</a>
+      <a href="#hardware">Hardware</a>
+      <a href="#unternehmen">Unternehmen</a>
+    </nav>
+    <a class="header-cta" href="#finder">Modell finden <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> Unabhängig · deutschsprachig · quellenbasiert</div>
+        <h1>Finde das passende <span>offene KI-Modell.</span></h1>
+        <p class="hero-text">Vergleiche Open-Weight-Modelle nach Leistung, Hardware, Lizenz, Datenschutz und Einsatzzweck – für deinen Rechner oder dein Unternehmen.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#finder">Für meinen Rechner <span>→</span></a>
+          <a class="btn btn-secondary" href="#unternehmen">Für mein Unternehmen <span>→</span></a>
+        </div>
+
+        <div class="trust-row">
+          <span>Keine Paywall</span>
+          <span>Kein Login</span>
+          <span>Primärquellen</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="model-console glass-card">
+          <div class="console-head">
+            <span>Open model stack</span>
+            <span class="status-pill"><b></b> lokal möglich</span>
+          </div>
+          <div class="console-model">OWM / Local AI</div>
+          <div class="console-grid">
+            <div><span>Kontrolle</span><strong>hoch</strong></div>
+            <div><span>Daten</span><strong>bei dir</strong></div>
+            <div><span>Deployment</span><strong>flexibel</strong></div>
+            <div><span>Abhängigkeit</span><strong>geringer</strong></div>
+          </div>
+          <div class="signal-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="finder" class="shell section-space-sm">
+      <div class="finder-panel glass-card">
+        <div class="section-heading split">
+          <div>
+            <span class="kicker">KI-Modell-Finder</span>
+            <h2>Welches Modell passt zu dir?</h2>
+          </div>
+          <button id="resetFilters" class="text-button" type="button">Filter zurücksetzen</button>
+        </div>
+
+        <div class="filters">
+          <label>ANWENDUNGSFALL
+            <select id="usecase">
+              <option value="all">Alle</option>
+              <option value="chat">Chat</option>
+              <option value="code">Coding</option>
+              <option value="rag">Dokumente / RAG</option>
+              <option value="agent">Agenten</option>
+            </select>
+          </label>
+
+          <label>HARDWARE
+            <select id="hardware">
+              <option value="all">Alle</option>
+              <option value="mac">Mac</option>
+              <option value="nvidia">NVIDIA GPU</option>
+              <option value="cpu">CPU</option>
+            </select>
+          </label>
+
+          <label>RAM / VRAM
+            <select id="memory">
+              <option value="all">Beliebig</option>
+              <option value="8">8 GB+</option>
+              <option value="16">16 GB+</option>
+              <option value="24">24 GB+</option>
+            </select>
+          </label>
+
+          <label>LOKAL ERFORDERLICH
+            <select id="local">
+              <option value="all">Egal</option>
+              <option value="yes">Ja</option>
+            </select>
+          </label>
+
+          <label>DEUTSCH WICHTIG
+            <select id="german">
+              <option value="all">Egal</option>
+              <option value="yes">Ja</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section id="modelle" class="shell section-space-sm">
+      <div class="section-heading split">
+        <div>
+          <span class="kicker">Empfohlene Modelle</span>
+          <h2>Passende Optionen auf einen Blick</h2>
+        </div>
+        <span id="resultCount" class="result-count">3 Modelle</span>
+      </div>
+
+      <div class="model-grid" id="modelGrid">
+        <article class="model-card" data-use="chat rag agent" data-hardware="mac nvidia cpu" data-memory="8" data-local="yes" data-german="yes">
+          <div class="model-top">
+            <div class="model-icon mi-m">M</div>
+            <span class="badge success">lokal möglich</span>
+          </div>
+          <div><h3>Mistral Small</h3><p class="maker">Mistral AI</p></div>
+          <p class="model-desc">Ausgewogenes Modell für Chat, RAG und Agenten mit guter Effizienz.</p>
+          <div class="chips"><span>kommerziell</span><span>mehrsprachig</span><span>RAG</span></div>
+          <div class="model-meta"><span>ab 8 GB</span><span>Chat · RAG</span></div>
+        </article>
+
+        <article class="model-card" data-use="chat code rag agent" data-hardware="mac nvidia cpu" data-memory="16" data-local="yes" data-german="yes">
+          <div class="model-top">
+            <div class="model-icon mi-q">Q</div>
+            <span class="badge success">lokal möglich</span>
+          </div>
+          <div><h3>Qwen</h3><p class="maker">Alibaba</p></div>
+          <p class="model-desc">Vielseitige Modellfamilie mit Fokus auf Coding, Reasoning und Mehrsprachigkeit.</p>
+          <div class="chips"><span>coding</span><span>reasoning</span><span>multilingual</span></div>
+          <div class="model-meta"><span>ab 16 GB</span><span>Chat · Code · RAG</span></div>
+        </article>
+
+        <article class="model-card" data-use="chat code rag" data-hardware="mac nvidia cpu" data-memory="8" data-local="yes" data-german="yes">
+          <div class="model-top">
+            <div class="model-icon mi-g">G</div>
+            <span class="badge success">lokal möglich</span>
+          </div>
+          <div><h3>Gemma</h3><p class="maker">Google DeepMind</p></div>
+          <p class="model-desc">Leichtgewichtige Modellfamilie für lokale Nutzung und effiziente Setups.</p>
+          <div class="chips"><span>effizient</span><span>lokal</span><span>multilingual</span></div>
+          <div class="model-meta"><span>ab 8 GB</span><span>Chat · Code</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="hardware" class="shell paths section-space-sm">
+      <article class="path-card private-card">
+        <span class="kicker">Für Privatnutzer</span>
+        <h2>KI lokal auf deinem Rechner.</h2>
+        <p>Finde heraus, welche Modelle zu Mac, Windows, Linux, RAM und VRAM passen – ohne unnötigen Setup-Ballast.</p>
+        <a href="#finder">Hardware-Check starten <span>→</span></a>
+        <div class="path-tags"><span>Mac</span><span>Windows</span><span>Linux</span><span>GPU</span></div>
+      </article>
+
+      <article id="unternehmen" class="path-card business-card">
+        <span class="kicker">Für Unternehmen</span>
+        <h2>Modelle sicher und unabhängig einsetzen.</h2>
+        <p>Vergleiche Lizenz, Deployment, Datenresidenz und Hardwarebedarf für reale Unternehmensszenarien.</p>
+        <a href="#finder">Unternehmens-Check ansehen <span>→</span></a>
+        <div class="path-tags"><span>Lizenz</span><span>On-Prem</span><span>Private Cloud</span><span>EU</span></div>
+      </article>
+    </section>
+
+    <section class="shell proof section-space-sm">
+      <div class="proof-item"><span>01</span><div><strong>Quellenbasiert</strong><p>Informationen nachvollziehbar statt nur zusammengefasst.</p></div></div>
+      <div class="proof-item"><span>02</span><div><strong>Hardware-nah</strong><p>Modelle im Kontext von RAM, VRAM und lokalem Betrieb.</p></div></div>
+      <div class="proof-item"><span>03</span><div><strong>Lizenz im Blick</strong><p>Kommerzielle Nutzung und Einschränkungen sichtbar machen.</p></div></div>
+      <div class="proof-item"><span>04</span><div><strong>Praxis statt Ranking</strong><p>Welches Modell passt zu welchem Zweck?</p></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <div>
+      <strong>OpenWeightModelle</strong>
+      <p>Deutschsprachige Referenz für offene KI-Modelle.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#modelle">Modelle</a>
+      <a href="#finder">Finder</a>
+      <a href="#unternehmen">Unternehmen</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
