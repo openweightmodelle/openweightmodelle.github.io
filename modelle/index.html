@@ -11,18 +11,29 @@
 <div class="topnote"><div class="container"><span>Stand: 30. September 2026 · Source-first Referenz</span><span>50 dokumentierte Open-Weight-Modelle · Keine bezahlten Rankings</span></div></div>
 <header class="header"><div class="container">
 <a class="brand" href="/"><span class="logo"></span><span>OpenWeightModelle<small>.de</small></span></a>
-<nav class="nav"><a href="/modelle/">Modelle</a><a href="/#finder">Modellfinder</a><a href="/#privat">Privat</a><a href="/#unternehmen">Unternehmen</a><a href="/methodik/">Methodik</a></nav>
+<nav class="nav"><a href="/modelle/">Modelle</a><a href="/#finder">Modellfinder</a><a href="/#privat">Für meinen Rechner</a><a href="/#unternehmen">Für Teams &amp; Unternehmen</a><a href="/methodik/">Methodik</a></nav>
 <a class="nav-cta" href="/modelle/">50 Modelle ansehen</a>
 </div></header>
 
 <main>
 <section class="index-hero"><div class="container"><div class="breadcrumbs"><a href="/">Start</a><span>›</span>Modelle</div><div class="kicker">Modellübersicht</div><h1>50 Open-Weight-Modelle</h1><p>Deutschsprachige Model-Passports für lokale KI, Self-Hosting und Unternehmensentscheidungen. Keine Rangliste: Filtere nach deinem konkreten Einsatzzweck.</p></div></section>
 <section class="section"><div class="container"><div class="finder"><div class="filters">
-<label>SUCHEN<input id="search" placeholder="Modell, Anbieter oder Familie"></label>
+<label>SUCHEN<input id="search" placeholder="Modell oder Anbieter – optional"></label>
 <label>ANBIETER<select id="provider"><option value="all">Alle</option><option value="openai">OpenAI</option><option value="meta">Meta</option><option value="google">Google</option><option value="qwen">Qwen</option><option value="mistral">Mistral AI</option><option value="deepseek">DeepSeek</option><option value="microsoft">Microsoft</option><option value="ibm">IBM</option></select></label>
-<label>SCHWERPUNKT<select id="category"><option value="all">Alle</option><option>Chat</option><option>Reasoning</option><option>Coding</option><option>Multimodal</option><option>Enterprise</option></select></label>
+<label>WAS SOLL DIE KI KÖNNEN?<select id="category"><option value="all">Alle Einsatzzwecke</option><option value="Chat">Chatten &amp; Texte schreiben</option><option value="Reasoning">Analysieren &amp; komplex denken</option><option value="Coding">Programmieren &amp; Code verstehen</option><option value="Multimodal">Bilder &amp; Dokumente verstehen</option><option value="Enterprise">Für Unternehmensanwendungen</option></select></label>
 <label>LIZENZTYP<select id="license"><option value="all">Alle</option><option value="permissiv">Permissiv</option><option value="community">Community</option><option value="custom">Custom</option><option value="research">Research</option></select></label>
-</div></div>
+</div>
+<div class="quick-picks" aria-label="Schnellauswahl">
+<span>Oder direkt auswählen:</span>
+<button type="button" data-category-pick="Chat">💬 Chat &amp; Texte</button>
+<button type="button" data-category-pick="Coding">⌨ Programmieren</button>
+<button type="button" data-category-pick="Multimodal">▧ Bilder &amp; Dokumente</button>
+<button type="button" data-category-pick="Reasoning">◎ Analysieren &amp; Reasoning</button>
+<button type="button" data-category-pick="Enterprise">◇ Unternehmen</button>
+<button type="button" data-category-pick="all">Alle Modelle</button>
+</div>
+<p class="filter-note">Kein Fachbegriff nötig: Wähle einfach einen Einsatzzweck oder nutze die freie Suche.</p>
+</div>
 <div class="heading-row" style="margin-top:28px"><div><div class="kicker">Alle Profile</div><h2>Modelle durchsuchen</h2></div><span class="count" id="resultCount">50 Modelle</span></div>
 <div class="cards"><article class="card model-card" data-name="gpt-oss-20b" data-provider="openai" data-family="gpt-oss" data-category="Reasoning" data-license="permissiv">
 <div class="card-top"><div class="provider-mark">O</div><span class="status">High-End lokal</span></div>
@@ -276,5 +287,5 @@
 <div class="chips"><span class="chip">Enterprise</span><span class="chip">2B-Klasse</span><span class="chip">Apache 2.0</span></div>
 <div class="card-foot"><span>Text</span><a class="card-link" href="/modelle/granite-3-3-2b-instruct/">Profil →</a></div></article></div></div></section>
 </main>
-<footer class="footer"><div class="container"><div><b>OpenWeightModelle.de</b><br><small>Deutschsprachige Referenz für offene KI-Modelle.</small></div><div class="footer-links"><a href="/modelle/">Modelle</a><a href="/methodik/">Methodik</a><a href="/">Start</a></div></div></footer>
+<footer class="footer"><div class="container"><div><b>OpenWeightModelle.de</b><br><small>Deutschsprachige Referenz für offene KI-Modelle.</small></div><div class="footer-links"><a href="/modelle/">Modelle</a><a href="/methodik/">Methodik</a><a href="/">Start</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a></div></div></footer>
 <script src="/assets/site.js"></script></body></html>

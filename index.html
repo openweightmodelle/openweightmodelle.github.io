@@ -11,7 +11,7 @@
 <div class="topnote"><div class="container"><span>Stand: 30. September 2026 · Source-first Referenz</span><span>50 dokumentierte Open-Weight-Modelle · Keine bezahlten Rankings</span></div></div>
 <header class="header"><div class="container">
 <a class="brand" href="/"><span class="logo"></span><span>OpenWeightModelle<small>.de</small></span></a>
-<nav class="nav"><a href="/modelle/">Modelle</a><a href="/#finder">Modellfinder</a><a href="/#privat">Privat</a><a href="/#unternehmen">Unternehmen</a><a href="/methodik/">Methodik</a></nav>
+<nav class="nav"><a href="/modelle/">Modelle</a><a href="/#finder">Modellfinder</a><a href="/#privat">Für meinen Rechner</a><a href="/#unternehmen">Für Teams &amp; Unternehmen</a><a href="/methodik/">Methodik</a></nav>
 <a class="nav-cta" href="/modelle/">50 Modelle ansehen</a>
 </div></header>
 
@@ -19,7 +19,7 @@
 <section class="hero"><div class="container">
 <div><div class="eyebrow">Offene KI · lokal · souverän</div><h1>Finde das passende <span>offene KI-Modell.</span></h1>
 <p>Vergleiche Open-Weight-Modelle nach Leistung, Hardware, Lizenz, Datenschutz und Einsatzzweck – für deinen Rechner oder dein Unternehmen.</p>
-<div class="actions"><a class="btn primary" href="#finder">Für meinen Rechner →</a><a class="btn secondary" href="#unternehmen">Für mein Unternehmen →</a></div>
+<div class="actions"><a class="btn primary" href="#finder">Modelle für meinen Rechner →</a><a class="btn secondary" href="#unternehmen">Für Teams &amp; Unternehmen →</a></div>
 <div class="trust"><span>50 Model-Passports</span><span>Primärquellen</span><span>keine bezahlten Rankings</span></div></div>
 <div class="hero-viz"><div class="glass"><div class="glass-head"><span>Open Model Intelligence</span><span class="pill">source-first</span></div><div class="model-title">Modell · Hardware · Lizenz</div>
 <div class="metric-grid"><div class="metric"><small>Modelle</small><b>50 dokumentiert</b></div><div class="metric"><small>Deployment</small><b>Lokal · Server · Cloud</b></div><div class="metric"><small>Fokus</small><b>Chat · Coding · Vision</b></div><div class="metric"><small>Prüfung</small><b>30. September 2026</b></div></div>
@@ -28,11 +28,20 @@
 
 <section id="finder" class="section"><div class="container">
 <div class="heading-row"><div><div class="kicker">Modellfinder</div><h2>Welches Open-Weight-Modell passt?</h2><p class="lead">Filtere die dokumentierten Modelle nach Anbieter, Schwerpunkt und Lizenztyp.</p></div><span class="count" id="resultCount">9 Modelle</span></div>
-<div class="finder"><div class="filters"><label>SUCHEN<input id="search" placeholder="z. B. Gemma, Coding, Qwen"></label>
+<div class="finder"><div class="filters"><label>SUCHEN<input id="search" placeholder="Modell oder Anbieter – optional"></label>
 <label>ANBIETER<select id="provider"><option value="all">Alle</option><option value="openai">OpenAI</option><option value="meta">Meta</option><option value="google">Google</option><option value="qwen">Qwen</option><option value="mistral">Mistral AI</option><option value="deepseek">DeepSeek</option><option value="microsoft">Microsoft</option><option value="ibm">IBM</option></select></label>
-<label>SCHWERPUNKT<select id="category"><option value="all">Alle</option><option>Chat</option><option>Reasoning</option><option>Coding</option><option>Multimodal</option><option>Enterprise</option></select></label>
+<label>WAS SOLL DIE KI KÖNNEN?<select id="category"><option value="all">Alle Einsatzzwecke</option><option value="Chat">Chatten &amp; Texte schreiben</option><option value="Reasoning">Analysieren &amp; komplex denken</option><option value="Coding">Programmieren &amp; Code verstehen</option><option value="Multimodal">Bilder &amp; Dokumente verstehen</option><option value="Enterprise">Für Unternehmensanwendungen</option></select></label>
 <label>LIZENZTYP<select id="license"><option value="all">Alle</option><option value="permissiv">Permissiv</option><option value="community">Community</option><option value="custom">Custom</option><option value="research">Research</option></select></label></div>
-<p class="filter-note">Die Startseite zeigt eine Auswahl. Die vollständige Übersicht enthält alle 50 Profile.</p></div>
+<div class="quick-picks" aria-label="Schnellauswahl">
+<span>Oder direkt auswählen:</span>
+<button type="button" data-category-pick="Chat">💬 Chat &amp; Texte</button>
+<button type="button" data-category-pick="Coding">⌨ Programmieren</button>
+<button type="button" data-category-pick="Multimodal">▧ Bilder &amp; Dokumente</button>
+<button type="button" data-category-pick="Reasoning">◎ Analysieren &amp; Reasoning</button>
+<button type="button" data-category-pick="Enterprise">◇ Unternehmen</button>
+<button type="button" data-category-pick="all">Alle Modelle</button>
+</div>
+<p class="filter-note">Du musst keinen Modellnamen kennen: Wähle einfach, was die KI für dich können soll. Die Startseite zeigt zunächst eine Auswahl.</p></div>
 <div class="cards" style="margin-top:18px"><article class="card model-card" data-name="gpt-oss-20b" data-provider="openai" data-family="gpt-oss" data-category="Reasoning" data-license="permissiv">
 <div class="card-top"><div class="provider-mark">O</div><span class="status">High-End lokal</span></div>
 <h3>gpt-oss-20b</h3><div class="maker">OpenAI · gpt-oss</div>
@@ -83,11 +92,11 @@
 </div></section>
 
 <section class="section soft"><div class="container"><div class="path-grid">
-<div class="path private" id="privat"><div class="kicker">Für Privatnutzer</div><h3>Welche KI läuft auf meinem Rechner?</h3><p>Von 270M bis 32B: Hardware-Hinweise helfen dabei, realistische Modelle für Mac, Windows, Linux und lokale GPU-Setups einzugrenzen.</p><a href="/modelle/">Lokale Modelle entdecken →</a></div>
-<div class="path business" id="unternehmen"><div class="kicker">Für Unternehmen</div><h3>Lizenz, Deployment und Kontrolle verstehen.</h3><p>Jedes Profil trennt Modellgewichte, Lizenztyp, lokale Machbarkeit und redaktionelle Hardware-Einordnung – mit direktem Link zur Primärquelle.</p><a href="/methodik/">Methodik ansehen →</a></div>
+<div class="path private" id="privat"><div class="kicker">Für meinen Rechner</div><h3>Welche KI läuft auf meinem Mac oder PC?</h3><p>Finde Modelle, die zu deinem verfügbaren RAM, VRAM und lokalen Setup passen – vom normalen Laptop bis zur starken GPU-Workstation.</p><a href="/modelle/">Passende lokale Modelle ansehen →</a></div>
+<div class="path business" id="unternehmen"><div class="kicker">Für Teams &amp; Unternehmen</div><h3>Welches Modell passt zum professionellen Einsatz?</h3><p>Vergleiche Lizenz, Self-Hosting, Hardware und Einsatzgebiet für interne Assistenten, RAG, Coding, Dokumente und weitere Unternehmensanwendungen.</p><a href="/modelle/">Modelle für Unternehmen vergleichen →</a></div>
 </div></div></section>
 
 <section class="section"><div class="container"><div class="features"><div class="feature"><b>Lizenz transparent</b><p>Apache, MIT, Community- oder Custom-Lizenz werden getrennt ausgewiesen.</p></div><div class="feature"><b>Hardware praxisnah</b><p>Grobe lokale Speicherklasse statt unrealistischer Pauschalversprechen.</p></div><div class="feature"><b>Quellenbasiert</b><p>Offizielle Modellkarten und Anbieterquellen direkt am Profil.</p></div><div class="feature"><b>GEO-freundlich</b><p>Direkte Antworten, strukturierte Fakten und maschinenlesbares JSON-LD.</p></div></div></div></section>
 </main>
-<footer class="footer"><div class="container"><div><b>OpenWeightModelle.de</b><br><small>Deutschsprachige Referenz für offene KI-Modelle.</small></div><div class="footer-links"><a href="/modelle/">Modelle</a><a href="/methodik/">Methodik</a><a href="/">Start</a></div></div></footer>
+<footer class="footer"><div class="container"><div><b>OpenWeightModelle.de</b><br><small>Deutschsprachige Referenz für offene KI-Modelle.</small></div><div class="footer-links"><a href="/modelle/">Modelle</a><a href="/methodik/">Methodik</a><a href="/">Start</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a></div></div></footer>
 <script src="/assets/site.js"></script></body></html>

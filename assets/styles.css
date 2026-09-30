@@ -27,3 +27,45 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit}.container
 .index-hero{padding:52px 0 35px;background:linear-gradient(180deg,#f0f8fc,#fff)}.index-hero h1{font-size:48px;letter-spacing:-.05em;margin:10px 0}.index-hero p{max-width:760px;color:#596f86;line-height:1.7}
 @media(max-width:960px){.nav{display:none}.hero .container,.profile-grid{grid-template-columns:1fr}.hero-viz{min-height:300px}.cards{grid-template-columns:1fr 1fr}.filters{grid-template-columns:1fr 1fr}.features{grid-template-columns:1fr 1fr}.article-grid{grid-template-columns:1fr}.side{position:static}.evidence .container{grid-template-columns:1fr 1fr}.facts{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.container{width:calc(100% - 24px)}.topnote .container{display:block}.topnote span:last-child{display:none}.header .container{height:62px}.nav-cta{display:none}.hero .container{padding-top:42px}.hero h1{font-size:47px}.hero p{font-size:16px}.cards,.path-grid,.filters,.features{grid-template-columns:1fr}.heading-row{align-items:flex-start;flex-direction:column}.passport-grid{grid-template-columns:1fr 1fr}.evidence .container{grid-template-columns:1fr 1fr}.footer .container{flex-direction:column}.quickfacts{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}}
+
+
+.quick-picks{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:16px;
+  padding-top:15px;
+  border-top:1px solid #e8eff5;
+}
+.quick-picks>span{
+  font-size:11px;
+  color:#71859a;
+  font-weight:700;
+  margin-right:3px;
+}
+.quick-picks button{
+  appearance:none;
+  border:1px solid #d5e3ee;
+  background:#f8fbfd;
+  color:#315370;
+  border-radius:999px;
+  padding:8px 11px;
+  cursor:pointer;
+  font-size:11px;
+  font-weight:700;
+  transition:.16s ease;
+}
+.quick-picks button:hover,
+.quick-picks button.active{
+  background:#eaf5fc;
+  border-color:#a9cde5;
+  color:#124f83;
+  transform:translateY(-1px);
+}
+.footer-links{flex-wrap:wrap;justify-content:flex-end}
+@media(max-width:620px){
+  .quick-picks{align-items:flex-start}
+  .quick-picks>span{width:100%;margin-bottom:2px}
+  .footer-links{justify-content:flex-start}
+}
