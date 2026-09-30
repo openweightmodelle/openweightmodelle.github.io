@@ -1,207 +1,93 @@
-<!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OpenWeightModelle – Offene KI-Modelle vergleichen</title>
-  <meta name="description" content="Deutschsprachige Referenz für Open-Weight-Modelle, lokale KI, Hardware, Lizenzen und Deployment.">
-  <meta name="theme-color" content="#08111f">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="ambient ambient-1"></div>
-  <div class="ambient ambient-2"></div>
+<!doctype html><html lang="de"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenWeightModelle: offene KI-Modelle vergleichen</title>
+<meta name="description" content="Finde passende Open-Weight-Modelle nach Hardware, Lizenz und Einsatzzweck. 50 deutschsprachige Model-Passports für lokale KI und Unternehmen.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://openweightmodelle.de/">
+<meta property="og:type" content="website"><meta property="og:locale" content="de_DE"><meta property="og:site_name" content="OpenWeightModelle">
+<meta property="og:title" content="OpenWeightModelle: offene KI-Modelle vergleichen"><meta property="og:description" content="Finde passende Open-Weight-Modelle nach Hardware, Lizenz und Einsatzzweck. 50 deutschsprachige Model-Passports für lokale KI und Unternehmen."><meta property="og:url" content="https://openweightmodelle.de/">
+<meta name="twitter:card" content="summary"><link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://openweightmodelle.de/#organization","name":"OpenWeightModelle","url":"https://openweightmodelle.de/","description":"Deutschsprachige Referenz für Open-Weight-Modelle, lokale KI, Hardware, Lizenzen und Deployment."},{"@type":"WebSite","@id":"https://openweightmodelle.de/#website","name":"OpenWeightModelle","url":"https://openweightmodelle.de/","inLanguage":"de-DE","publisher":{"@id":"https://openweightmodelle.de/#organization"}},{"@type":"WebPage","@id":"https://openweightmodelle.de/#page","name":"OpenWeightModelle – Offene KI-Modelle vergleichen","url":"https://openweightmodelle.de/","inLanguage":"de-DE","dateModified":"2026-09-30","isPartOf":{"@id":"https://openweightmodelle.de/#website"}}]}</script></head><body>
+<div class="topnote"><div class="container"><span>Stand: 30. September 2026 · Source-first Referenz</span><span>50 dokumentierte Open-Weight-Modelle · Keine bezahlten Rankings</span></div></div>
+<header class="header"><div class="container">
+<a class="brand" href="/"><span class="logo"></span><span>OpenWeightModelle<small>.de</small></span></a>
+<nav class="nav"><a href="/modelle/">Modelle</a><a href="/#finder">Modellfinder</a><a href="/#privat">Privat</a><a href="/#unternehmen">Unternehmen</a><a href="/methodik/">Methodik</a></nav>
+<a class="nav-cta" href="/modelle/">50 Modelle ansehen</a>
+</div></header>
 
-  <header class="site-header">
-    <a class="brand" href="#top">
-      <span class="brand-mark"><i></i><i></i><i></i></span>
-      <span>OpenWeightModelle</span>
-    </a>
-    <nav class="main-nav">
-      <a href="#modelle">Modelle</a>
-      <a href="#finder">Finder</a>
-      <a href="#hardware">Hardware</a>
-      <a href="#unternehmen">Unternehmen</a>
-    </nav>
-    <a class="header-cta" href="#finder">Modell finden <span>↗</span></a>
-  </header>
+<main>
+<section class="hero"><div class="container">
+<div><div class="eyebrow">Offene KI · lokal · souverän</div><h1>Finde das passende <span>offene KI-Modell.</span></h1>
+<p>Vergleiche Open-Weight-Modelle nach Leistung, Hardware, Lizenz, Datenschutz und Einsatzzweck – für deinen Rechner oder dein Unternehmen.</p>
+<div class="actions"><a class="btn primary" href="#finder">Für meinen Rechner →</a><a class="btn secondary" href="#unternehmen">Für mein Unternehmen →</a></div>
+<div class="trust"><span>50 Model-Passports</span><span>Primärquellen</span><span>keine bezahlten Rankings</span></div></div>
+<div class="hero-viz"><div class="glass"><div class="glass-head"><span>Open Model Intelligence</span><span class="pill">source-first</span></div><div class="model-title">Modell · Hardware · Lizenz</div>
+<div class="metric-grid"><div class="metric"><small>Modelle</small><b>50 dokumentiert</b></div><div class="metric"><small>Deployment</small><b>Lokal · Server · Cloud</b></div><div class="metric"><small>Fokus</small><b>Chat · Coding · Vision</b></div><div class="metric"><small>Prüfung</small><b>30. September 2026</b></div></div>
+<div class="mini-cards"><span>Hardware</span><span>Lizenz</span><span>Quellen</span></div></div></div>
+</div></section>
 
-  <main id="top">
-    <section class="hero shell">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="live-dot"></span> Unabhängig · deutschsprachig · quellenbasiert</div>
-        <h1>Finde das passende <span>offene KI-Modell.</span></h1>
-        <p class="hero-text">Vergleiche Open-Weight-Modelle nach Leistung, Hardware, Lizenz, Datenschutz und Einsatzzweck – für deinen Rechner oder dein Unternehmen.</p>
+<section id="finder" class="section"><div class="container">
+<div class="heading-row"><div><div class="kicker">Modellfinder</div><h2>Welches Open-Weight-Modell passt?</h2><p class="lead">Filtere die dokumentierten Modelle nach Anbieter, Schwerpunkt und Lizenztyp.</p></div><span class="count" id="resultCount">9 Modelle</span></div>
+<div class="finder"><div class="filters"><label>SUCHEN<input id="search" placeholder="z. B. Gemma, Coding, Qwen"></label>
+<label>ANBIETER<select id="provider"><option value="all">Alle</option><option value="openai">OpenAI</option><option value="meta">Meta</option><option value="google">Google</option><option value="qwen">Qwen</option><option value="mistral">Mistral AI</option><option value="deepseek">DeepSeek</option><option value="microsoft">Microsoft</option><option value="ibm">IBM</option></select></label>
+<label>SCHWERPUNKT<select id="category"><option value="all">Alle</option><option>Chat</option><option>Reasoning</option><option>Coding</option><option>Multimodal</option><option>Enterprise</option></select></label>
+<label>LIZENZTYP<select id="license"><option value="all">Alle</option><option value="permissiv">Permissiv</option><option value="community">Community</option><option value="custom">Custom</option><option value="research">Research</option></select></label></div>
+<p class="filter-note">Die Startseite zeigt eine Auswahl. Die vollständige Übersicht enthält alle 50 Profile.</p></div>
+<div class="cards" style="margin-top:18px"><article class="card model-card" data-name="gpt-oss-20b" data-provider="openai" data-family="gpt-oss" data-category="Reasoning" data-license="permissiv">
+<div class="card-top"><div class="provider-mark">O</div><span class="status">High-End lokal</span></div>
+<h3>gpt-oss-20b</h3><div class="maker">OpenAI · gpt-oss</div>
+<p class="desc">OpenAIs kompakteres Open-Weight-Reasoning-Modell für lokale und selbst gehostete Inferenz. Es richtet sich an Nutzer, die Werkzeugnutzung, strukturiertes Denken und anpassbare…</p>
+<div class="chips"><span class="chip">Reasoning</span><span class="chip">20B-Klasse</span><span class="chip">Apache 2.0</span></div>
+<div class="card-foot"><span>Text</span><a class="card-link" href="/modelle/gpt-oss-20b/">Profil →</a></div></article><article class="card model-card" data-name="Llama 4 Scout 17B-16E Instruct" data-provider="meta" data-family="Llama 4" data-category="Multimodal" data-license="community">
+<div class="card-top"><div class="provider-mark">L</div><span class="status">Server / große Workstation</span></div>
+<h3>Llama 4 Scout 17B-16E Instruct</h3><div class="maker">Meta · Llama 4</div>
+<p class="desc">Llama 4 Scout ist Metas multimodales MoE-Modell mit 17 Milliarden aktivierten Parametern pro Token. Es kombiniert Text- und Bildverständnis mit sehr großem Kontext und ist eher für…</p>
+<div class="chips"><span class="chip">Multimodal</span><span class="chip">17B aktiv · MoE</span><span class="chip">Llama 4 Community License</span></div>
+<div class="card-foot"><span>Text + Bild</span><a class="card-link" href="/modelle/llama-4-scout-17b-16e-instruct/">Profil →</a></div></article><article class="card model-card" data-name="Gemma 3 4B IT" data-provider="google" data-family="Gemma 3" data-category="Multimodal" data-license="custom">
+<div class="card-top"><div class="provider-mark">G</div><span class="status">Leicht bis mittel</span></div>
+<h3>Gemma 3 4B IT</h3><div class="maker">Google · Gemma 3</div>
+<p class="desc">Gemma 3 4B IT ist die kleinste multimodale Gemma-3-Variante. Sie verbindet Bild- und Textverarbeitung mit einer Größe, die noch für viele lokale Rechner interessant ist, und ist damit…</p>
+<div class="chips"><span class="chip">Multimodal</span><span class="chip">4B</span><span class="chip">Gemma Terms</span></div>
+<div class="card-foot"><span>Text + Bild</span><a class="card-link" href="/modelle/gemma-3-4b-it/">Profil →</a></div></article><article class="card model-card" data-name="Qwen3 8B" data-provider="qwen" data-family="Qwen3" data-category="Reasoning" data-license="permissiv">
+<div class="card-top"><div class="provider-mark">Q</div><span class="status">Desktop / Laptop</span></div>
+<h3>Qwen3 8B</h3><div class="maker">Qwen · Qwen3</div>
+<p class="desc">Qwen3 8B ist eine der ausgewogensten Größen für lokale General-Purpose-Nutzung. Es bietet genügend Kapazität für ernsthafte Chat-, Coding- und Reasoning-Experimente, ohne zwingend eine…</p>
+<div class="chips"><span class="chip">Reasoning</span><span class="chip">8B</span><span class="chip">Apache 2.0</span></div>
+<div class="card-foot"><span>Text</span><a class="card-link" href="/modelle/qwen3-8b/">Profil →</a></div></article><article class="card model-card" data-name="Qwen3 30B-A3B" data-provider="qwen" data-family="Qwen3 MoE" data-category="Reasoning" data-license="permissiv">
+<div class="card-top"><div class="provider-mark">Q</div><span class="status">Workstation</span></div>
+<h3>Qwen3 30B-A3B</h3><div class="maker">Qwen · Qwen3 MoE</div>
+<p class="desc">Qwen3 30B-A3B nutzt eine Mixture-of-Experts-Architektur: nur ein kleiner Teil der Gesamtparameter ist pro Token aktiv. Das kann eine interessante Balance aus Modellkapazität und…</p>
+<div class="chips"><span class="chip">Reasoning</span><span class="chip">30B gesamt · 3B aktiv</span><span class="chip">Apache 2.0</span></div>
+<div class="card-foot"><span>Text</span><a class="card-link" href="/modelle/qwen3-30b-a3b/">Profil →</a></div></article><article class="card model-card" data-name="Mistral Small 3.2 24B Instruct" data-provider="mistral" data-family="Mistral Small 3" data-category="Chat" data-license="permissiv">
+<div class="card-top"><div class="provider-mark">M</div><span class="status">High-End lokal</span></div>
+<h3>Mistral Small 3.2 24B Instruct</h3><div class="maker">Mistral AI · Mistral Small 3</div>
+<p class="desc">Mistral Small 3.2 24B Instruct ist ein kompaktes, aber leistungsfähiges General-Purpose-Modell mit Fokus auf Instruktionsbefolgung und Function Calling. Die 24B-Klasse ist besonders für…</p>
+<div class="chips"><span class="chip">Chat</span><span class="chip">24B</span><span class="chip">Apache 2.0</span></div>
+<div class="card-foot"><span>Text</span><a class="card-link" href="/modelle/mistral-small-3-2-24b-instruct-2506/">Profil →</a></div></article><article class="card model-card" data-name="DeepSeek-R1" data-provider="deepseek" data-family="DeepSeek R1" data-category="Reasoning" data-license="permissiv">
+<div class="card-top"><div class="provider-mark">D</div><span class="status">Server / Multi-GPU</span></div>
+<h3>DeepSeek-R1</h3><div class="maker">DeepSeek · DeepSeek R1</div>
+<p class="desc">DeepSeek-R1 ist ein großes Open-Weight-Reasoning-Modell mit Schwerpunkt auf mehrstufigem Problemlösen. Die vollständige Variante ist infrastrukturell sehr anspruchsvoll; für lokale…</p>
+<div class="chips"><span class="chip">Reasoning</span><span class="chip">großes MoE</span><span class="chip">MIT</span></div>
+<div class="card-foot"><span>Text</span><a class="card-link" href="/modelle/deepseek-r1/">Profil →</a></div></article><article class="card model-card" data-name="Phi-4" data-provider="microsoft" data-family="Phi-4" data-category="Reasoning" data-license="permissiv">
+<div class="card-top"><div class="provider-mark">Φ</div><span class="status">Workstation</span></div>
+<h3>Phi-4</h3><div class="maker">Microsoft · Phi-4</div>
+<p class="desc">Phi-4 ist Microsofts 14B-Textmodell mit Fokus auf hochwertige Trainingsdaten und Reasoning. Die MIT-Lizenz und überschaubare Größe machen es für lokale Forschung, private Assistenz und…</p>
+<div class="chips"><span class="chip">Reasoning</span><span class="chip">14B</span><span class="chip">MIT</span></div>
+<div class="card-foot"><span>Text</span><a class="card-link" href="/modelle/phi-4/">Profil →</a></div></article><article class="card model-card" data-name="Granite 3.3 8B Instruct" data-provider="ibm" data-family="Granite 3.3" data-category="Enterprise" data-license="permissiv">
+<div class="card-top"><div class="provider-mark">I</div><span class="status">Desktop / Workstation</span></div>
+<h3>Granite 3.3 8B Instruct</h3><div class="maker">IBM · Granite 3.3</div>
+<p class="desc">Granite 3.3 8B Instruct ist IBMs kompakte Unternehmens- und General-Purpose-Variante mit Apache-2.0-Lizenz. Sie eignet sich für Self-Hosted-RAG, strukturierte Assistenz und Anwendungen,…</p>
+<div class="chips"><span class="chip">Enterprise</span><span class="chip">8B</span><span class="chip">Apache 2.0</span></div>
+<div class="card-foot"><span>Text</span><a class="card-link" href="/modelle/granite-3-3-8b-instruct/">Profil →</a></div></article></div>
+<div class="actions" style="justify-content:center;margin-top:28px"><a class="btn primary" href="/modelle/">Alle 50 Modelle öffnen →</a></div>
+</div></section>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#finder">Für meinen Rechner <span>→</span></a>
-          <a class="btn btn-secondary" href="#unternehmen">Für mein Unternehmen <span>→</span></a>
-        </div>
+<section class="section soft"><div class="container"><div class="path-grid">
+<div class="path private" id="privat"><div class="kicker">Für Privatnutzer</div><h3>Welche KI läuft auf meinem Rechner?</h3><p>Von 270M bis 32B: Hardware-Hinweise helfen dabei, realistische Modelle für Mac, Windows, Linux und lokale GPU-Setups einzugrenzen.</p><a href="/modelle/">Lokale Modelle entdecken →</a></div>
+<div class="path business" id="unternehmen"><div class="kicker">Für Unternehmen</div><h3>Lizenz, Deployment und Kontrolle verstehen.</h3><p>Jedes Profil trennt Modellgewichte, Lizenztyp, lokale Machbarkeit und redaktionelle Hardware-Einordnung – mit direktem Link zur Primärquelle.</p><a href="/methodik/">Methodik ansehen →</a></div>
+</div></div></section>
 
-        <div class="trust-row">
-          <span>Keine Paywall</span>
-          <span>Kein Login</span>
-          <span>Primärquellen</span>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="model-console glass-card">
-          <div class="console-head">
-            <span>Open model stack</span>
-            <span class="status-pill"><b></b> lokal möglich</span>
-          </div>
-          <div class="console-model">OWM / Local AI</div>
-          <div class="console-grid">
-            <div><span>Kontrolle</span><strong>hoch</strong></div>
-            <div><span>Daten</span><strong>bei dir</strong></div>
-            <div><span>Deployment</span><strong>flexibel</strong></div>
-            <div><span>Abhängigkeit</span><strong>geringer</strong></div>
-          </div>
-          <div class="signal-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="finder" class="shell section-space-sm">
-      <div class="finder-panel glass-card">
-        <div class="section-heading split">
-          <div>
-            <span class="kicker">KI-Modell-Finder</span>
-            <h2>Welches Modell passt zu dir?</h2>
-          </div>
-          <button id="resetFilters" class="text-button" type="button">Filter zurücksetzen</button>
-        </div>
-
-        <div class="filters">
-          <label>ANWENDUNGSFALL
-            <select id="usecase">
-              <option value="all">Alle</option>
-              <option value="chat">Chat</option>
-              <option value="code">Coding</option>
-              <option value="rag">Dokumente / RAG</option>
-              <option value="agent">Agenten</option>
-            </select>
-          </label>
-
-          <label>HARDWARE
-            <select id="hardware">
-              <option value="all">Alle</option>
-              <option value="mac">Mac</option>
-              <option value="nvidia">NVIDIA GPU</option>
-              <option value="cpu">CPU</option>
-            </select>
-          </label>
-
-          <label>RAM / VRAM
-            <select id="memory">
-              <option value="all">Beliebig</option>
-              <option value="8">8 GB+</option>
-              <option value="16">16 GB+</option>
-              <option value="24">24 GB+</option>
-            </select>
-          </label>
-
-          <label>LOKAL ERFORDERLICH
-            <select id="local">
-              <option value="all">Egal</option>
-              <option value="yes">Ja</option>
-            </select>
-          </label>
-
-          <label>DEUTSCH WICHTIG
-            <select id="german">
-              <option value="all">Egal</option>
-              <option value="yes">Ja</option>
-            </select>
-          </label>
-        </div>
-      </div>
-    </section>
-
-    <section id="modelle" class="shell section-space-sm">
-      <div class="section-heading split">
-        <div>
-          <span class="kicker">Empfohlene Modelle</span>
-          <h2>Passende Optionen auf einen Blick</h2>
-        </div>
-        <span id="resultCount" class="result-count">3 Modelle</span>
-      </div>
-
-      <div class="model-grid" id="modelGrid">
-        <article class="model-card" data-use="chat rag agent" data-hardware="mac nvidia cpu" data-memory="8" data-local="yes" data-german="yes">
-          <div class="model-top">
-            <div class="model-icon mi-m">M</div>
-            <span class="badge success">lokal möglich</span>
-          </div>
-          <div><h3>Mistral Small</h3><p class="maker">Mistral AI</p></div>
-          <p class="model-desc">Ausgewogenes Modell für Chat, RAG und Agenten mit guter Effizienz.</p>
-          <div class="chips"><span>kommerziell</span><span>mehrsprachig</span><span>RAG</span></div>
-          <div class="model-meta"><span>ab 8 GB</span><span>Chat · RAG</span></div>
-        </article>
-
-        <article class="model-card" data-use="chat code rag agent" data-hardware="mac nvidia cpu" data-memory="16" data-local="yes" data-german="yes">
-          <div class="model-top">
-            <div class="model-icon mi-q">Q</div>
-            <span class="badge success">lokal möglich</span>
-          </div>
-          <div><h3>Qwen</h3><p class="maker">Alibaba</p></div>
-          <p class="model-desc">Vielseitige Modellfamilie mit Fokus auf Coding, Reasoning und Mehrsprachigkeit.</p>
-          <div class="chips"><span>coding</span><span>reasoning</span><span>multilingual</span></div>
-          <div class="model-meta"><span>ab 16 GB</span><span>Chat · Code · RAG</span></div>
-        </article>
-
-        <article class="model-card" data-use="chat code rag" data-hardware="mac nvidia cpu" data-memory="8" data-local="yes" data-german="yes">
-          <div class="model-top">
-            <div class="model-icon mi-g">G</div>
-            <span class="badge success">lokal möglich</span>
-          </div>
-          <div><h3>Gemma</h3><p class="maker">Google DeepMind</p></div>
-          <p class="model-desc">Leichtgewichtige Modellfamilie für lokale Nutzung und effiziente Setups.</p>
-          <div class="chips"><span>effizient</span><span>lokal</span><span>multilingual</span></div>
-          <div class="model-meta"><span>ab 8 GB</span><span>Chat · Code</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="hardware" class="shell paths section-space-sm">
-      <article class="path-card private-card">
-        <span class="kicker">Für Privatnutzer</span>
-        <h2>KI lokal auf deinem Rechner.</h2>
-        <p>Finde heraus, welche Modelle zu Mac, Windows, Linux, RAM und VRAM passen – ohne unnötigen Setup-Ballast.</p>
-        <a href="#finder">Hardware-Check starten <span>→</span></a>
-        <div class="path-tags"><span>Mac</span><span>Windows</span><span>Linux</span><span>GPU</span></div>
-      </article>
-
-      <article id="unternehmen" class="path-card business-card">
-        <span class="kicker">Für Unternehmen</span>
-        <h2>Modelle sicher und unabhängig einsetzen.</h2>
-        <p>Vergleiche Lizenz, Deployment, Datenresidenz und Hardwarebedarf für reale Unternehmensszenarien.</p>
-        <a href="#finder">Unternehmens-Check ansehen <span>→</span></a>
-        <div class="path-tags"><span>Lizenz</span><span>On-Prem</span><span>Private Cloud</span><span>EU</span></div>
-      </article>
-    </section>
-
-    <section class="shell proof section-space-sm">
-      <div class="proof-item"><span>01</span><div><strong>Quellenbasiert</strong><p>Informationen nachvollziehbar statt nur zusammengefasst.</p></div></div>
-      <div class="proof-item"><span>02</span><div><strong>Hardware-nah</strong><p>Modelle im Kontext von RAM, VRAM und lokalem Betrieb.</p></div></div>
-      <div class="proof-item"><span>03</span><div><strong>Lizenz im Blick</strong><p>Kommerzielle Nutzung und Einschränkungen sichtbar machen.</p></div></div>
-      <div class="proof-item"><span>04</span><div><strong>Praxis statt Ranking</strong><p>Welches Modell passt zu welchem Zweck?</p></div></div>
-    </section>
-  </main>
-
-  <footer class="site-footer shell">
-    <div>
-      <strong>OpenWeightModelle</strong>
-      <p>Deutschsprachige Referenz für offene KI-Modelle.</p>
-    </div>
-    <div class="footer-links">
-      <a href="#modelle">Modelle</a>
-      <a href="#finder">Finder</a>
-      <a href="#unternehmen">Unternehmen</a>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<section class="section"><div class="container"><div class="features"><div class="feature"><b>Lizenz transparent</b><p>Apache, MIT, Community- oder Custom-Lizenz werden getrennt ausgewiesen.</p></div><div class="feature"><b>Hardware praxisnah</b><p>Grobe lokale Speicherklasse statt unrealistischer Pauschalversprechen.</p></div><div class="feature"><b>Quellenbasiert</b><p>Offizielle Modellkarten und Anbieterquellen direkt am Profil.</p></div><div class="feature"><b>GEO-freundlich</b><p>Direkte Antworten, strukturierte Fakten und maschinenlesbares JSON-LD.</p></div></div></div></section>
+</main>
+<footer class="footer"><div class="container"><div><b>OpenWeightModelle.de</b><br><small>Deutschsprachige Referenz für offene KI-Modelle.</small></div><div class="footer-links"><a href="/modelle/">Modelle</a><a href="/methodik/">Methodik</a><a href="/">Start</a></div></div></footer>
+<script src="/assets/site.js"></script></body></html>
