@@ -1,0 +1,32 @@
+# OpenWeightModelle.de
+
+> Deutschsprachige Referenz für Open-Weight-Modelle, lokale KI, Hardware, Lizenzen, Self-Hosting und Deployment.
+
+Stand: 30. September 2026
+
+## Zentrale Bereiche
+- https://openweightmodelle.de/ — Einstieg und Modellfinder
+- https://openweightmodelle.de/modelle/ — Modellindex mit 64 dokumentierten Open-Weight-Modellen
+- https://openweightmodelle.de/wissen/ — Wissensbereich mit 20 ausführlichen Referenzartikeln
+- https://openweightmodelle.de/methodik/ — Methodik, Quellen- und Hardwareeinordnung
+
+## Wichtige Wissensartikel
+- https://openweightmodelle.de/wissen/was-sind-open-weight-modelle/
+- https://openweightmodelle.de/wissen/open-weight-vs-open-source/
+- https://openweightmodelle.de/wissen/modellgroesse-hardware/
+- https://openweightmodelle.de/wissen/quantisierung/
+- https://openweightmodelle.de/wissen/ram-vram/
+- https://openweightmodelle.de/wissen/ollama-llama-cpp/
+- https://openweightmodelle.de/wissen/vllm-self-hosting/
+- https://openweightmodelle.de/wissen/lizenzen-open-weight/
+- https://openweightmodelle.de/wissen/self-hosting-unternehmen/
+- https://openweightmodelle.de/wissen/rag-open-weight/
+- https://openweightmodelle.de/wissen/eu-ai-act-open-weight/
+- https://openweightmodelle.de/wissen/open-weight-sicherheit/
+
+## Redaktionelle Prinzipien
+- Open Weight wird nicht pauschal mit Open Source gleichgesetzt.
+- Lizenzangaben werden getrennt von technischen Eigenschaften dokumentiert.
+- Hardwareangaben sind Praxisorientierungen und keine Hersteller-Garantien.
+- Modellprofile verlinken Primärquellen.
+- Es gibt keine bezahlten Modellrankings.

@@ -3,12 +3,9 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://openweightmodelle.de/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/methodik/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/impressum/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/datenschutz/</loc><lastmod>2026-09-30</lastmod></url>
-{% for file in site.static_files %}{% if file.path contains '/modelle/' and file.extname == '.html' and file.path != '/modelle/index.html' %}  <url><loc>https://openweightmodelle.de{{ file.path | replace: '/index.html','/' }}</loc><lastmod>2026-09-30</lastmod></url>
-{% endif %}{% endfor %}{% for page in site.pages %}{% if page.url contains '/modelle/' or page.url contains '/wissen/' %}{% unless page.url == '/modelle/' or page.url == '/wissen/' %}  <url><loc>https://openweightmodelle.de{{ page.url }}</loc><lastmod>2026-09-30</lastmod></url>
-{% endunless %}{% endif %}{% endfor %}</urlset>
+{% for p in site.pages %}
+{% if p.url == '/' or p.url == '/modelle/' or p.url == '/wissen/' or p.url == '/methodik/' or p.url == '/impressum/' or p.url == '/datenschutz/' or p.url contains '/modelle/' or p.url contains '/wissen/' %}
+  <url><loc>https://openweightmodelle.de{{ p.url }}</loc><lastmod>2026-09-30</lastmod></url>
+{% endif %}
+{% endfor %}
+</urlset>
