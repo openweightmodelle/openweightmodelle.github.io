@@ -1,79 +1,14 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://openweightmodelle.de/</loc><lastmod>2026-09-30</lastmod></url>
   <url><loc>https://openweightmodelle.de/modelle/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://openweightmodelle.de/wissen/</loc><lastmod>2026-09-30</lastmod></url>
   <url><loc>https://openweightmodelle.de/methodik/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/gpt-oss-20b/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/gpt-oss-120b/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/llama-4-scout-17b-16e-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/llama-4-maverick-17b-128e-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/llama-3-3-70b-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/llama-3-2-1b-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/llama-3-2-3b-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/llama-3-2-11b-vision-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/llama-3-2-90b-vision-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/gemma-3-270m-it/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/gemma-3-1b-it/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/gemma-3-4b-it/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/gemma-3-12b-it/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/gemma-3-27b-it/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/gemma-3n-e2b-it/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/gemma-3n-e4b-it/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/qwen3-0-6b/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/qwen3-1-7b/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/qwen3-4b/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/qwen3-8b/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/qwen3-14b/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/qwen3-32b/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/qwen3-30b-a3b/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/qwen3-235b-a22b/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/qwen2-5-coder-7b-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/qwen2-5-coder-14b-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/qwen2-5-coder-32b-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/qwen2-5-vl-7b-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/qwen2-5-vl-32b-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/mistral-small-3-2-24b-instruct-2506/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/mistral-nemo-instruct-2407/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/ministral-8b-instruct-2410/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/mistral-7b-instruct-v0-3/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/devstral-small-2505/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/magistral-small-2506/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/pixtral-12b-2409/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/mixtral-8x7b-instruct-v0-1/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/mixtral-8x22b-instruct-v0-1/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/deepseek-r1/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/deepseek-v3-0324/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/deepseek-r1-distill-qwen-7b/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/deepseek-r1-distill-qwen-14b/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/deepseek-r1-distill-qwen-32b/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/deepseek-coder-v2-lite-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/phi-4/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/phi-4-mini-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/phi-4-multimodal-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/phi-4-reasoning-plus/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/granite-3-3-8b-instruct/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/modelle/granite-3-3-2b-instruct/</loc><lastmod>2026-09-30</lastmod></url>
   <url><loc>https://openweightmodelle.de/impressum/</loc><lastmod>2026-09-30</lastmod></url>
   <url><loc>https://openweightmodelle.de/datenschutz/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/was-sind-open-weight-modelle/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/open-weight-vs-open-source/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/open-weight-vs-api-modelle/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/modellgewichte-und-parameter/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/modellgroesse-hardware/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/quantisierung/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/gguf-und-safetensors/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/ram-vram/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/lokale-ki-mac-windows-linux/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/ollama-llama-cpp/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/vllm-self-hosting/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/lizenzen-open-weight/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/kommerzielle-nutzung/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/self-hosting-unternehmen/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/datenschutz-datensouveraenitaet/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/rag-open-weight/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/fine-tuning-lora-qlora/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/mixture-of-experts/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/eu-ai-act-open-weight/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://openweightmodelle.de/wissen/open-weight-sicherheit/</loc><lastmod>2026-09-30</lastmod></url>
-</urlset>
+{% for file in site.static_files %}{% if file.path contains '/modelle/' and file.extname == '.html' and file.path != '/modelle/index.html' %}  <url><loc>https://openweightmodelle.de{{ file.path | replace: '/index.html','/' }}</loc><lastmod>2026-09-30</lastmod></url>
+{% endif %}{% endfor %}{% for page in site.pages %}{% if page.url contains '/modelle/' or page.url contains '/wissen/' %}{% unless page.url == '/modelle/' or page.url == '/wissen/' %}  <url><loc>https://openweightmodelle.de{{ page.url }}</loc><lastmod>2026-09-30</lastmod></url>
+{% endunless %}{% endif %}{% endfor %}</urlset>
