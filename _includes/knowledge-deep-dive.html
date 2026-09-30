@@ -1,0 +1,273 @@
+{% case include.slug %}
+{% when 'was-sind-open-weight-modelle' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-kontrolle">Warum Open Weight vor allem eine Frage der Kontrolle ist</h2>
+<p>Der praktische Wert offener Gewichte liegt weniger in einem Etikett als in der <strong>Verschiebung von Abhängigkeiten</strong>. Bei einem ausschließlich per API erreichbaren Modell entscheidet der Anbieter über Modellversion, Preis, Rate Limits, Datenpfad und häufig auch darüber, welche Funktionen verfügbar bleiben. Bei Open Weight kann der Betreiber zumindest die Inferenzschicht selbst wählen: lokal, im eigenen Rechenzentrum, in einer Private Cloud oder bei einem spezialisierten GPU-Hoster.</p>
+<p>Das bedeutet nicht, dass jede Abhängigkeit verschwindet. Runtimes, GPU-Treiber, Quantisierungen und Modellformate bilden weiterhin einen technischen Stack. Der Unterschied ist, dass diese Komponenten austauschbarer werden. Für Unternehmen kann genau das strategisch relevant sein, wenn ein Modell über mehrere Jahre in interne Prozesse integriert werden soll.</p>
+<h2 id="vertiefung-pruefung">Vier Fragen vor dem Einsatz</h2>
+<ul>
+<li><strong>Darf ich die Gewichte herunterladen und betreiben?</strong> Maßgeblich ist die konkrete Lizenz.</li>
+<li><strong>Kann meine Hardware das Modell sinnvoll ausführen?</strong> Parameterzahl, Präzision, Kontext und Runtime bestimmen den Bedarf.</li>
+<li><strong>Welche Teile sind tatsächlich offen?</strong> Gewichte, Code, Trainingsdaten und Trainingsrezept sind getrennte Ebenen.</li>
+<li><strong>Wer übernimmt den Betrieb?</strong> Self-Hosting verlagert Verantwortung für Updates, Sicherheit, Monitoring und Verfügbarkeit zum Betreiber.</li>
+</ul>
+<div class="knowledge-callout"><b>GEO-Kernpunkt:</b> Open Weight beschreibt primär die Verfügbarkeit der trainierten Parameter. Ob ein Modell zugleich Open Source ist, kommerziell genutzt werden darf oder vollständig reproduzierbar ist, muss separat geprüft werden.</div>
+</section>
+
+{% when 'open-weight-vs-open-source' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-begriffe">Warum die Begriffe in der Praxis auseinanderlaufen</h2>
+<p>Bei klassischer Software ist „Open Source“ eng mit Quellcode und klaren Nutzungsfreiheiten verbunden. Bei modernen KI-Modellen reicht Quellcode allein jedoch nicht aus, um das System zu verstehen oder zu verändern. Ein trainiertes Modell entsteht aus Architektur, Trainingscode, Datenaufbereitung, Trainingsdaten, Hyperparametern, Zwischenständen und den finalen Parametern. Deshalb ist die Frage nach Offenheit bei KI mehrdimensional.</p>
+<p>Die Open Source Initiative fordert für Open Source AI nicht nur zugängliche Gewichte, sondern auch ausreichende Informationen und Freiheiten zum Nutzen, Verändern und Weitergeben. Ein Modell kann daher <strong>Open Weight, aber nicht Open Source AI</strong> sein. Genau diese Trennung verhindert, dass herunterladbare Gewichte automatisch mit uneingeschränkten Rechten gleichgesetzt werden.</p>
+<h2 id="vertiefung-lizenz">Lizenz schlägt Marketingbegriff</h2>
+<p>Für eine reale Produktentscheidung sollte nie der Marketingbegriff auf einer Landingpage ausschlaggebend sein. Wichtig sind Lizenztext, Modellkarte und gegebenenfalls Acceptable-Use-Regeln. Apache 2.0 und MIT sind bekannte permissive Lizenzen. Community- oder anbieterspezifische Modelllizenzen können dagegen zusätzliche Bedingungen, Nutzungsgrenzen oder Pflichten enthalten.</p>
+<table class="compare-table"><thead><tr><th>Prüffrage</th><th>Open Weight</th><th>Open Source AI</th></tr></thead><tbody>
+<tr><td>Gewichte verfügbar?</td><td>typischerweise ja</td><td>ja, unter geeigneten Bedingungen</td></tr>
+<tr><td>Trainingscode offen?</td><td>nicht zwingend</td><td>erwartet</td></tr>
+<tr><td>Dateninformationen vorhanden?</td><td>nicht zwingend</td><td>für Veränderbarkeit wesentlich</td></tr>
+<tr><td>Nutzung für jeden Zweck?</td><td>lizenzabhängig</td><td>grundlegende Freiheit</td></tr>
+</tbody></table>
+</section>
+
+{% when 'open-weight-vs-api-modelle' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-kosten">Kostenstruktur: variable API-Kosten gegen eigenen Betrieb</h2>
+<p>Eine API ist wirtschaftlich attraktiv, wenn Nutzung schwankt, schnelle Produktentwicklung wichtiger ist als Infrastrukturkontrolle oder keine eigenen GPU-Ressourcen vorhanden sind. Bezahlt wird typischerweise nach Nutzung. Open-Weight-Self-Hosting verschiebt die Kosten in Richtung Hardware, Reservierung von GPU-Kapazität, Strom, Betrieb, Monitoring und Personal.</p>
+<p>Deshalb ist „Open Weight ist billiger“ keine allgemeingültige Aussage. Bei geringer Last kann eine API klar günstiger sein. Bei stabiler hoher Last, sensiblen Daten oder besonderen Latenzanforderungen kann eigener Betrieb dagegen sinnvoll werden. Entscheidend ist die <strong>Gesamtkostenbetrachtung</strong>, nicht nur der Preis pro Token oder die Anschaffung einer GPU.</p>
+<h2 id="vertiefung-entscheidung">Wann welcher Ansatz typischerweise passt</h2>
+<table class="compare-table"><thead><tr><th>Kriterium</th><th>Open Weight / Self-Hosting</th><th>Externe API</th></tr></thead><tbody>
+<tr><td>Startgeschwindigkeit</td><td>mehr Setup</td><td>meist sehr schnell</td></tr>
+<tr><td>Datenpfad</td><td>stark kontrollierbar</td><td>anbieterabhängig</td></tr>
+<tr><td>Modellversion</td><td>fixierbar</td><td>Anbieter bestimmt Lifecycle</td></tr>
+<tr><td>Betriebsaufwand</td><td>hoch bis mittel</td><td>niedrig</td></tr>
+<tr><td>Skalierung</td><td>selbst planen</td><td>häufig abstrahiert</td></tr>
+</tbody></table>
+<p>Viele Unternehmen nutzen deshalb hybride Architekturen: sensible Workloads auf selbst gehosteten Modellen, Spitzenlast oder Spezialmodelle über externe APIs.</p>
+</section>
+
+{% when 'modellgewichte-und-parameter' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-parameter">Parameterzahl ist keine Qualitätsnote</h2>
+<p>Mehr Parameter erhöhen grundsätzlich die Modellkapazität, sagen aber allein wenig über die praktische Qualität aus. Trainingsdaten, Trainingsdauer, Architektur, Post-Training, Kontextmechanismus und Spezialisierung können ein kleineres aktuelles Modell in einem konkreten Einsatzgebiet deutlich attraktiver machen als ein älteres größeres Modell.</p>
+<p>Bei Mixture-of-Experts-Modellen muss zusätzlich zwischen <strong>Gesamtparametern</strong> und <strong>aktiven Parametern pro Token</strong> unterschieden werden. Ein Modell mit 120 Milliarden Gesamtparametern und 12 Milliarden aktiven Parametern kann rechnerisch wesentlich sparsamer sein als ein dichtes 120B-Modell. Die vollständigen Gewichte müssen für den Betrieb jedoch weiterhin gespeichert oder über mehrere Geräte verteilt werden.</p>
+<h2 id="vertiefung-speicher">Von Parametern zu Speicherbedarf</h2>
+<p>Als grobe Rohrechnung gilt: Parameterzahl × Bits pro Gewicht ÷ 8. 14 Milliarden Parameter in 16 Bit entsprechen also ungefähr 28 GB reinen Gewichtsdaten; 4 Bit wären idealisiert etwa 7 GB. Reale Dateien und Laufzeitbedarf weichen davon ab, weil Quantisierung Metadaten benötigt und zusätzlich KV-Cache, Runtime, Vision-Encoder oder andere Komponenten Speicher verbrauchen.</p>
+<div class="knowledge-callout"><b>Praxisregel:</b> Parameterzahl hilft bei der Größenklasse. Für eine Kauf- oder Deployment-Entscheidung sind jedoch konkrete Modellformate und reale Runtime-Messungen wichtiger.</div>
+</section>
+
+{% when 'modellgroesse-hardware' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-hardwareklassen">Hardwareklassen sinnvoll statt absolut betrachten</h2>
+<p>Die gleiche Modellfamilie kann in FP16, 8 Bit, 6 Bit oder 4 Bit völlig unterschiedliche Speicheranforderungen haben. Dazu kommen Unterschiede zwischen dedizierten GPUs, CPU-Offloading und Apple Unified Memory. Deshalb ist eine Modellgrößenklasse hilfreicher als die Behauptung, ein bestimmtes Modell „brauche exakt X GB“.</p>
+<p>Kleine 1B- bis 4B-Modelle eignen sich für Edge- und Laptop-Szenarien. 7B bis 14B sind für viele lokale Nutzer der praktische Sweet Spot. 27B bis 32B verlangen deutlich mehr Speicher und profitieren stark von hoher Speicherbandbreite. 70B und größere Dense-Modelle bewegen sich je nach Quantisierung in der Klasse großer Workstations oder Server.</p>
+<h2 id="vertiefung-kaufentscheidung">Welche Hardwareeigenschaften wirklich zählen</h2>
+<ul>
+<li><strong>Speicherkapazität:</strong> bestimmt, ob Gewichte und KV-Cache überhaupt Platz finden.</li>
+<li><strong>Speicherbandbreite:</strong> beeinflusst die Token-Geschwindigkeit stark, besonders bei großen Modellen.</li>
+<li><strong>GPU-Unterstützung der Runtime:</strong> CUDA, ROCm, Metal oder andere Backends sind nicht gleich gut unterstützt.</li>
+<li><strong>Kontextlänge:</strong> sehr lange Kontexte erhöhen den Laufzeitspeicher.</li>
+<li><strong>Parallelität:</strong> mehrere Nutzer oder Requests verändern die Dimensionierung deutlich.</li>
+</ul>
+</section>
+
+{% when 'quantisierung' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-quant">Was bei Quantisierung tatsächlich passiert</h2>
+<p>Quantisierung reduziert die numerische Präzision, mit der Modellgewichte gespeichert und teilweise berechnet werden. Statt jeden Wert beispielsweise in 16 Bit abzulegen, werden viele Werte auf 8, 6, 5 oder 4 Bit abgebildet. Dadurch sinken Datei- und Speichergröße; häufig steigt zudem die praktische Ausführbarkeit auf Consumer-Hardware.</p>
+<p>Moderne Verfahren quantisieren nicht naiv jeden Tensor gleich. Blockweise Skalierung, Ausreißerbehandlung und unterschiedliche Präzision für empfindliche Komponenten helfen, den Qualitätsverlust zu begrenzen. Darum sagt „4 Bit“ allein noch nicht, welches Quantisierungsverfahren oder welche Qualität tatsächlich vorliegt.</p>
+<h2 id="vertiefung-wahl">Wie man eine Quantisierung auswählt</h2>
+<p>Für lokale Chat-Nutzung ist eine gute 4- oder 5-Bit-Quantisierung häufig ein sinnvoller Ausgangspunkt. Wer maximale Qualität, lange Kontexte oder anspruchsvolles Reasoning priorisiert und genügend Speicher hat, kann höhere Präzision testen. Wichtig ist ein Vergleich mit eigenen Aufgaben: Code, deutsche Sprache, Extraktion oder mathematische Probleme reagieren unterschiedlich auf Kompression.</p>
+<table class="compare-table"><thead><tr><th>Präzision</th><th>Speicher</th><th>Typische Einordnung</th></tr></thead><tbody>
+<tr><td>FP16/BF16</td><td>hoch</td><td>Referenz, Training, Server</td></tr>
+<tr><td>8 Bit</td><td>mittel</td><td>gute Qualitätsreserve</td></tr>
+<tr><td>5/6 Bit</td><td>niedriger</td><td>lokaler Qualitätskompromiss</td></tr>
+<tr><td>4 Bit</td><td>deutlich niedriger</td><td>sehr verbreitet für lokale Inferenz</td></tr>
+</tbody></table>
+</section>
+
+{% when 'gguf-und-safetensors' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-formate">Warum das Dateiformat den ganzen Runtime-Pfad bestimmt</h2>
+<p>Safetensors ist ein sicheres Tensorformat, das im Hugging-Face- und Transformers-Ökosystem weit verbreitet ist. Es wird typischerweise genutzt, wenn ein Modell mit PyTorch/Transformers, vLLM oder einer anderen GPU-orientierten Runtime geladen wird. GGUF dagegen bündelt Modellmetadaten und quantisierte Tensoren für das ggml-/llama.cpp-Ökosystem und ist deshalb besonders in lokalen Desktop-Setups populär.</p>
+<p>Ein Modellname allein reicht also nicht. Für dieselbe Modellfamilie können mehrere Artefakte existieren: Originalgewichte in Safetensors, FP8- oder INT8-Servervarianten und verschiedene GGUF-Quantisierungen. Wer lokal starten möchte, sollte zuerst prüfen, welche Runtime eingesetzt werden soll und welches Artefakt dazu passt.</p>
+<h2 id="vertiefung-sicherheit">Format ist nicht gleich Vertrauenswürdigkeit</h2>
+<p>Ein sicheres Serialisierungsformat reduziert bestimmte Risiken, ersetzt aber keine Herkunftsprüfung. Modellrepository, Commit-Historie, Lizenz, Modellkarte und gegebenenfalls Remote-Code-Abhängigkeiten sollten weiterhin geprüft werden. Insbesondere Modelle mit benutzerdefiniertem Python-Code können zusätzliche Vertrauensentscheidungen erfordern.</p>
+<div class="knowledge-callout"><b>Merksatz:</b> Safetensors ist häufig der Server-/Transformers-Pfad; GGUF ist häufig der lokale llama.cpp-Pfad. Die konkrete Modellfamilie und Runtime entscheiden.</div>
+</section>
+
+{% when 'ram-vram' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-speicherplanung">Speicherplanung für echte Nutzung</h2>
+<p>Die Modellgewichte sind nur der Ausgangspunkt. In produktiven oder langen Chats wächst der KV-Cache mit der tatsächlich verwendeten Kontextlänge. Bei mehreren parallelen Nutzern vervielfacht sich dieser Anteil. Vision- und Audio-Modelle können zusätzliche Encoder und Medientokens mitbringen. Außerdem benötigen CUDA-, Metal- oder CPU-Backends eigene Buffer.</p>
+<p>Für einen privaten Rechner ist deshalb eine Reserve von mehreren Gigabyte sinnvoll. Für Server sollte die Dimensionierung nicht nur auf einen erfolgreichen Einzelrequest zielen, sondern auf den erwarteten Gleichzeitigkeitseffekt: Anzahl der Sequenzen, typische Promptlänge, maximale Antwortlänge und Batch-Verhalten.</p>
+<h2 id="vertiefung-bandbreite">Speicherbandbreite ist oft der unterschätzte Faktor</h2>
+<p>Bei autoregressiver Generierung werden große Teile der Gewichte für jedes neue Token gelesen. Deshalb kann hohe Speicherbandbreite die wahrgenommene Geschwindigkeit stark beeinflussen. Zwei Systeme mit ähnlich viel RAM können sich in Tokens pro Sekunde deutlich unterscheiden. Auf Apple Silicon ist Unified Memory besonders interessant, weil große Speicherpools CPU und GPU gemeinsam zur Verfügung stehen; dedizierte GPUs bieten dagegen sehr hohe Bandbreite in ihrem eigenen VRAM.</p>
+</section>
+
+{% when 'lokale-ki-mac-windows-linux' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-plattform">Welche Plattform passt zu welchem Nutzer?</h2>
+<p>Macs mit Apple Silicon sind für lokale KI attraktiv, weil Unified Memory auch großen Modellen einen gemeinsamen Speicherpool bietet. Windows-Rechner profitieren besonders von NVIDIA-GPUs mit breiter CUDA-Unterstützung, während Linux die größte Flexibilität für Server, Container und automatisierte Deployments bietet. Keine Plattform ist pauschal „die beste“ – entscheidend sind Modellgröße, Runtime und gewünschter Bedienkomfort.</p>
+<h2 id="vertiefung-start">Ein sinnvoller Einstieg ohne Overengineering</h2>
+<ol>
+<li>Mit einem 3B- bis 8B-Instruct-Modell beginnen.</li>
+<li>Eine etablierte Runtime wie Ollama, LM Studio, llama.cpp oder MLX verwenden.</li>
+<li>Zuerst kurze reale Aufgaben testen, statt nur Benchmarks zu vergleichen.</li>
+<li>Erst danach größere Modelle und lange Kontexte ausprobieren.</li>
+</ol>
+<p>Wer lokal arbeitet, sollte außerdem Modelllizenz und Downloadquelle prüfen. „Läuft auf meinem Rechner“ sagt noch nichts darüber aus, ob das Modell kommerziell genutzt, weitergegeben oder in einen Dienst eingebaut werden darf.</p>
+</section>
+
+{% when 'ollama-llama-cpp' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-unterschied">Ollama abstrahiert, llama.cpp kontrolliert</h2>
+<p>Ollama bietet eine komfortable Ebene für Modellverwaltung, lokale API und reproduzierbare Modellkonfiguration. Für viele Nutzer ist das der schnellste Weg von „Modellname“ zu einer funktionierenden lokalen Anwendung. llama.cpp sitzt näher an der eigentlichen Inferenz und bietet sehr viele Optionen für Backends, GPU-Offloading, Kontext, Batching und Serverbetrieb.</p>
+<p>Technisch schließen sich beide nicht aus: Ollama nutzt für viele lokale Modelle Komponenten aus dem llama.cpp-Ökosystem. Die Entscheidung ist daher weniger „welches ist besser?“ als „wie viel Abstraktion möchte ich?“</p>
+<h2 id="vertiefung-auswahl">Typische Entscheidung</h2>
+<table class="compare-table"><thead><tr><th>Anforderung</th><th>Ollama</th><th>llama.cpp</th></tr></thead><tbody>
+<tr><td>schneller lokaler Start</td><td>sehr gut</td><td>mehr Handarbeit</td></tr>
+<tr><td>Modellverwaltung</td><td>integriert</td><td>manuell</td></tr>
+<tr><td>Feintuning der Runtime</td><td>begrenzt abstrahiert</td><td>sehr hoch</td></tr>
+<tr><td>Embedding in eigene Tools</td><td>einfache API</td><td>CLI, Server, Bibliothek</td></tr>
+</tbody></table>
+</section>
+
+{% when 'vllm-self-hosting' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-serving">Warum Serving andere Optimierungen braucht als lokaler Chat</h2>
+<p>Ein Desktop-Chat verarbeitet meist eine Sequenz nach der anderen. Ein Modellserver für Teams muss dagegen viele Requests mit unterschiedlicher Promptlänge, Antwortlänge und Priorität zusammenführen. Genau hier werden Scheduling, kontinuierliches Batching, KV-Cache-Verwaltung und GPU-Auslastung entscheidend. vLLM ist für diese Serving-Situation ausgelegt.</p>
+<p>Die OpenAI-kompatiblen Endpunkte erleichtern Migrationen: Anwendungen können häufig einen anderen Base-URL-Endpunkt verwenden, ohne die gesamte Clientlogik neu zu schreiben. Dennoch sollte Kompatibilität pro Funktion geprüft werden, etwa bei Tool Calling, strukturierten Ausgaben, Embeddings oder multimodalen Inputs.</p>
+<h2 id="vertiefung-architektur">Produktionsarchitektur um vLLM herum</h2>
+<p>vLLM sollte in Unternehmen nicht als alleinstehender öffentlich erreichbarer Prozess betrachtet werden. Üblich ist eine Schicht aus Reverse Proxy oder API Gateway, Authentifizierung, Rate Limits, TLS, Observability und Netzwerksegmentierung. Die aktuelle vLLM-Dokumentation weist ausdrücklich darauf hin, dass die eingebaute API-Key-Option nicht automatisch jeden Endpunkt schützt.</p>
+<h2 id="vertiefung-kapazitaet">Kapazität planen</h2>
+<p>Wichtige Kennzahlen sind Time to First Token, Tokens pro Sekunde, gleichzeitige Sequenzen, GPU-Speicherbelegung und Queue-Zeit. Ein Server, der einen Einzelbenchmark schnell beantwortet, kann unter paralleler Last dennoch ungeeignet sein. Deshalb gehören Lasttests mit realistischen Prompt- und Antwortlängen in jede Produktionsfreigabe.</p>
+</section>
+
+{% when 'lizenzen-open-weight' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-lizenzarten">Permissiv, Community, Research und Custom sind unterschiedliche Risikoklassen</h2>
+<p>Apache 2.0 und MIT sind etablierte permissive Softwarelizenzen. Bei KI-Modellen begegnet man zusätzlich Community-Lizenzen, Research-Lizenzen und vollständig anbieterspezifischen Bedingungen. Diese können Einschränkungen für bestimmte Nutzungen, Schwellenwerte, Namensnennung, Weitergabe oder gehostete Dienste enthalten.</p>
+<p>Die Lizenzbezeichnung im Modellrepository ist deshalb nur der Startpunkt. Für einen produktiven Einsatz sollte der vollständige Lizenztext versioniert dokumentiert werden. Unternehmen sollten außerdem prüfen, ob separate Acceptable-Use-Policies oder Markenbedingungen gelten.</p>
+<h2 id="vertiefung-checkliste">Lizenz-Check vor Produktion</h2>
+<ul>
+<li>Ist kommerzielle Nutzung ausdrücklich erlaubt?</li>
+<li>Darf das Modell verändert oder fine-getunt werden?</li>
+<li>Dürfen Gewichte oder Derivate weitergegeben werden?</li>
+<li>Gibt es Bedingungen für Hosted Services oder sehr große Nutzer?</li>
+<li>Müssen Lizenztext, Notices oder Attribution weitergegeben werden?</li>
+<li>Existieren zusätzliche Nutzungsrichtlinien?</li>
+</ul>
+<div class="knowledge-callout"><b>Keine Rechtsberatung:</b> OpenWeightModelle dokumentiert veröffentlichte Lizenzinformationen. Für rechtlich kritische Produktentscheidungen ist die Prüfung des Originaltexts maßgeblich.</div>
+</section>
+
+{% when 'kommerzielle-nutzung' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-geschaeftsmodelle">„Kommerziell“ kann mehrere Dinge bedeuten</h2>
+<p>Es macht einen Unterschied, ob ein Unternehmen ein Modell nur intern verwendet, es als Bestandteil eines Produkts ausliefert, eine gehostete API anbietet oder veränderte Gewichte weitergibt. Viele Lizenzfragen entstehen erst an dieser Stelle. Deshalb sollte der konkrete Geschäftsprozess beschrieben werden, bevor jemand pauschal sagt, ein Modell sei „kommerziell nutzbar“.</p>
+<h2 id="vertiefung-dokumentation">Was Unternehmen dokumentieren sollten</h2>
+<p>Eine belastbare Modellfreigabe sollte mindestens Modellname und Version, Downloadquelle, Hash oder Commit, Lizenzversion, interne Nutzung, verantwortliches Team und bekannte Einschränkungen festhalten. Das verhindert, dass Monate später unklar ist, welche Gewichte unter welchen Bedingungen in Produktion gelangt sind.</p>
+<p>Hinzu kommen Datenschutz, Sicherheitsanforderungen, Export- oder Branchenregeln und Rechte an Eingabe- und Ausgabedaten. Die Open-Weight-Lizenz löst diese Fragen nicht automatisch.</p>
+</section>
+
+{% when 'self-hosting-unternehmen' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-betriebsmodell">Self-Hosting ist ein Betriebsmodell, kein einzelner Server</h2>
+<p>Ein produktives Open-Weight-System besteht aus mehr als Modellgewichten und GPU. Typisch sind API Gateway, Inferenzserver, Modell-Registry, Geheimnisverwaltung, Observability, Logging, RAG-Komponenten, Datenbanken und ein Updateprozess. Dazu kommen Kapazitätsplanung, Hochverfügbarkeit und ein Rollback-Pfad.</p>
+<p>Die wichtigste Architekturentscheidung lautet häufig: zentraler interner Modellservice oder mehrere anwendungsspezifische Deployments. Ein zentraler Service vereinfacht Governance und Auslastung, während dedizierte Deployments strengere Isolation und individuellere Modellversionen ermöglichen.</p>
+<h2 id="vertiefung-kostenmodell">Kosten richtig rechnen</h2>
+<p>Neben GPU-Stunden zählen Engineering, Bereitschaft, Netzwerk, Storage, Reserven, Leerlauf und Monitoring. Hohe GPU-Auslastung verbessert die Wirtschaftlichkeit; dauerhaft schlecht ausgelastete Hardware kann dagegen teurer sein als ein externer Dienst. Ein Pilot sollte deshalb sowohl Qualitäts- als auch Auslastungsdaten erfassen.</p>
+</section>
+
+{% when 'datenschutz-datensouveraenitaet' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-datenpfad">Self-Hosting verkürzt den Datenpfad – aber beendet Datenschutz nicht</h2>
+<p>Wenn ein Modell in eigener Infrastruktur läuft, müssen Prompts und Dokumente nicht zwingend an den ursprünglichen Modellanbieter übertragen werden. Das kann ein großer Vorteil sein. Trotzdem entstehen weiterhin personenbezogene Daten in Anwendung, Retrieval-System, Logs, Monitoring, Backups oder Supportprozessen.</p>
+<p>Datensouveränität bedeutet daher, den gesamten Datenfluss zu kontrollieren: Wer darf welche Daten sehen? Wo werden sie gespeichert? Wie lange bleiben Logs erhalten? Werden Vektor-Embeddings oder Chatverläufe persistiert? Welche Administratoren haben Zugriff?</p>
+<h2 id="vertiefung-privacy-by-design">Privacy by Design für Open-Weight-Stacks</h2>
+<ul>
+<li>Datenminimierung bereits vor dem Prompt.</li>
+<li>getrennte Mandanten und Rollen.</li>
+<li>Logging standardmäßig sparsam gestalten.</li>
+<li>verschlüsselte Übertragung und Speicher.</li>
+<li>Lösch- und Aufbewahrungsfristen definieren.</li>
+<li>RAG-Quellenrechte und Zugriffskontrollen übernehmen.</li>
+</ul>
+</section>
+
+{% when 'rag-open-weight' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-rag">RAG ergänzt das Modell, statt es neu zu trainieren</h2>
+<p>Retrieval-Augmented Generation verbindet ein Sprachmodell mit einer externen Wissensquelle. Vor der Generierung werden zur Anfrage passende Dokumentpassagen gesucht und in den Kontext eingefügt. Dadurch kann ein allgemeines Modell mit aktuellem oder internem Wissen arbeiten, ohne dieses Wissen dauerhaft in die Modellgewichte zu schreiben.</p>
+<p>RAG ist besonders geeignet für Richtlinien, Handbücher, Verträge, Wissensdatenbanken oder Produktdokumentation. Für Stiländerungen oder dauerhaft neues Verhalten ist Fine-Tuning oft die passendere Technik.</p>
+<h2 id="vertiefung-qualitaet">Die Qualität hängt stärker vom Retrieval ab als viele erwarten</h2>
+<p>Ein gutes Modell kann schlechte oder irrelevante Dokumentpassagen nicht zuverlässig reparieren. Chunking, Embedding-Modell, Metadatenfilter, Zugriffskontrollen und Re-Ranking sind deshalb zentrale Qualitätsfaktoren. Ebenso wichtig ist, Quellen in der Antwort sichtbar zu machen und „keine ausreichende Quelle gefunden“ als legitimes Ergebnis zu behandeln.</p>
+<div class="knowledge-callout"><b>Sicherheitsaspekt:</b> Externe Dokumente können indirekte Prompt-Injection enthalten. RAG verbessert Faktenbezug, beseitigt Prompt-Injection aber nicht automatisch.</div>
+</section>
+
+{% when 'fine-tuning-lora-qlora' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-lora">Warum LoRA so effizient ist</h2>
+<p>Beim vollständigen Fine-Tuning werden sehr viele oder alle Modellparameter aktualisiert. LoRA friert die ursprünglichen Gewichte ein und trainiert kleine Low-Rank-Matrizen in ausgewählten Schichten. Dadurch sinkt die Zahl trainierbarer Parameter drastisch und mehrere Adapter können getrennt für unterschiedliche Aufgaben verwaltet werden.</p>
+<p>QLoRA kombiniert diese Idee mit einer quantisierten Basis, typischerweise 4 Bit. Dadurch lässt sich der Speicherbedarf des Basismodells weiter reduzieren, während die Adapter in geeigneter Präzision trainiert werden.</p>
+<h2 id="vertiefung-wann">Wann Fine-Tuning sinnvoll ist – und wann nicht</h2>
+<p>Fine-Tuning eignet sich für wiederkehrendes Verhalten, Terminologie, Format oder domänenspezifische Muster. Es ist nicht die beste Methode, um häufig wechselnde Fakten in ein Modell zu „laden“. Für aktuelles Unternehmenswissen ist RAG meist leichter zu aktualisieren und besser nachvollziehbar.</p>
+<p>Vor jedem Training sollte ein Baseline-Test stehen. Wenn ein gutes Basismodell mit sauberem Prompting und RAG bereits funktioniert, kann Fine-Tuning unnötige Komplexität erzeugen.</p>
+</section>
+
+{% when 'mixture-of-experts' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-router">Der Router entscheidet, welche Experten rechnen</h2>
+<p>Bei Mixture-of-Experts-Modellen bestehen bestimmte Schichten aus mehreren Expertennetzwerken. Ein Router wählt für jedes Token nur einen kleinen Teil davon aus. Dadurch kann ein Modell sehr viele Gesamtparameter besitzen, ohne bei jedem Token die gesamte Rechenmenge eines gleich großen dichten Modells zu benötigen.</p>
+<p>Das erklärt Bezeichnungen wie „30B-A3B“ oder „120B-A12B“: Gesamt- und aktive Parameter sind verschiedene Größen. Für Geschwindigkeit ist die aktive Rechenmenge wichtig; für das Laden der Gewichte bleibt die Gesamtgröße jedoch relevant.</p>
+<h2 id="vertiefung-deployment">MoE macht Deployment nicht automatisch klein</h2>
+<p>Ein MoE-Modell kann recheneffizient sein und trotzdem enorme Speicheranforderungen haben. Große Modelle werden deshalb häufig über mehrere GPUs verteilt oder in stark quantisierten Varianten betrieben. Routing, Expert Parallelism und Kommunikationskosten können die Infrastruktur zusätzlich komplex machen.</p>
+</section>
+
+{% when 'eu-ai-act-open-weight' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-gpai">Open Weight und GPAI sind unterschiedliche Kategorien</h2>
+<p>Der EU AI Act unterscheidet Rollen und Pflichten entlang der Wertschöpfungskette. Ein Open-Weight-Modell kann zugleich ein General-Purpose-AI-Modell sein. Für Provider von GPAI-Modellen gelten seit 2. August 2025 bestimmte Pflichten. Für Modelle unter einer freien und Open-Source-Lizenz sieht Artikel 53 unter bestimmten Voraussetzungen Erleichterungen bei einzelnen Dokumentationspflichten vor.</p>
+<p>Diese Ausnahme ist jedoch nicht gleichbedeutend mit „Open Weight ist ausgenommen“. Die Kommission betont, dass Parameter einschließlich Gewichte, Informationen zur Architektur und zur Modellnutzung öffentlich verfügbar sein müssen; außerdem gelten für Modelle mit systemischem Risiko zusätzliche Anforderungen auch im Open-Source-Kontext.</p>
+<h2 id="vertiefung-downstream">Was für Unternehmen als Nutzer wichtig ist</h2>
+<p>Viele Unternehmen sind nicht Provider des Basismodells, sondern integrieren ein Modell in ein eigenes KI-System. Dann hängen Pflichten unter anderem von Rolle, Use Case und Risikoklasse des fertigen Systems ab. Modelllizenz, Datenschutz und AI-Act-Pflichten sollten deshalb getrennt bewertet werden.</p>
+<div class="knowledge-callout"><b>Stand 30. September 2026:</b> Für eine belastbare Compliance-Bewertung sind der aktuelle Gesetzestext, Leitlinien der Kommission und gegebenenfalls spezialisierte Rechtsberatung maßgeblich.</div>
+</section>
+
+{% when 'open-weight-sicherheit' %}
+
+<section class="knowledge-deep-dive">
+<h2 id="vertiefung-bedrohungen">Das Modell ist nur ein Teil der Angriffsfläche</h2>
+<p>Ein selbst gehostetes Modell reduziert die Abhängigkeit von einer externen API, eröffnet aber eigene Angriffsflächen: Modellserver, Netzwerk, Tool-Integrationen, RAG-Quellen, Zugangsdaten, Logs und Updatepfade. OWASP führt Prompt Injection, sensible Informationsweitergabe, Supply-Chain-Risiken und unsichere Ausgabehandlung als zentrale Risikofelder moderner LLM-Anwendungen.</p>
+<h2 id="vertiefung-schichten">Schutz in mehreren Schichten</h2>
+<ul>
+<li>Inference-Endpunkte nicht ungeschützt ins Internet stellen.</li>
+<li>Authentifizierung, Rollen und Rate Limits vor den Modellserver setzen.</li>
+<li>Tool-Aufrufe mit minimalen Rechten und expliziten Freigaben gestalten.</li>
+<li>RAG-Inhalte als potenziell untrusted behandeln.</li>
+<li>Modellausgaben validieren, bevor sie Code, SQL oder Aktionen auslösen.</li>
+<li>Modelle, Quantisierungen und Container aus vertrauenswürdigen Quellen beziehen.</li>
+<li>Versionen, Hashes und Änderungen protokollieren.</li>
+</ul>
+<p>NIST empfiehlt für generative KI einen Lebenszyklusansatz zum Risikomanagement. Sicherheit endet deshalb nicht nach dem Deployment: Monitoring, Red-Team-Tests, Incident-Prozesse und regelmäßige Evaluierung gehören dazu.</p>
+</section>
+
+{% endcase %}
