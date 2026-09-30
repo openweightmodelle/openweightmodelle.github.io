@@ -6,3 +6,34 @@
 @media(max-width:1100px){.finder-step{grid-template-columns:42px 1fr}.finder-step .audience-grid,.finder-step .task-grid{grid-column:2}.task-grid{grid-template-columns:repeat(3,1fr)}.advanced-filters .filters{grid-template-columns:1fr 1fr}.graphic-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.finder-intro{align-items:flex-start;flex-direction:column}.guided-finder{padding:19px;border-radius:21px}.finder-step{grid-template-columns:36px 1fr;gap:12px}.step-number{width:34px;height:34px;border-radius:10px}.audience-grid{grid-template-columns:1fr}.task-grid{grid-template-columns:1fr 1fr}.advanced-filters .filters{grid-template-columns:1fr}.finder-results-head{align-items:flex-start;flex-direction:column;gap:8px}.knowledge-featured,.knowledge-grid,.knowledge-home-grid{grid-template-columns:1fr}.graphic-grid{grid-template-columns:1fr}.flow{flex-direction:column}.flow .graphic-arrow{width:auto;transform:rotate(90deg)}.bar-row{grid-template-columns:70px 1fr 55px}}
 @media(max-width:460px){.task-grid{grid-template-columns:1fr}}
+
+
+/* Stronger choice affordances in the guided finder */
+.audience-card{border:2px solid #c9ddec;background:linear-gradient(145deg,#fbfdff,#f1f8ff);box-shadow:0 10px 28px rgba(33,82,120,.07);padding:22px 22px 48px}
+.audience-card:nth-child(2){background:linear-gradient(145deg,#fbfffd,#effaf6);border-color:#cce6dc}
+.audience-card:not(.active):after{content:'Auswählen →';position:absolute;right:20px;bottom:18px;font-size:11px;font-weight:800;color:#1767b8;letter-spacing:.01em}
+.audience-card:nth-child(2):not(.active):after{color:#0a8060}
+.audience-card:hover{transform:translateY(-3px) scale(1.005);border-color:#72add5;box-shadow:0 18px 42px rgba(30,79,119,.14)}
+.audience-card.active{border-color:#2563eb;background:linear-gradient(145deg,#eaf5ff,#f8fcff);box-shadow:0 18px 45px rgba(37,99,235,.16)}
+.audience-card.active:after{right:16px;top:15px;bottom:auto}
+.audience-icon{width:48px;height:48px;border-radius:14px;background:#dff0ff;font-size:22px}
+.task-grid button{position:relative;border:2px solid #d4e3ee;background:linear-gradient(180deg,#fff,#f9fcfe);padding:18px 15px 39px;min-height:132px;box-shadow:0 7px 18px rgba(32,70,100,.045)}
+.task-grid button:not(.active):after{content:'Auswählen';position:absolute;left:14px;bottom:14px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#2b6b9f}
+.task-grid button:hover{border-color:#7db5db;background:#f2faff;box-shadow:0 13px 28px rgba(42,91,128,.11)}
+.task-grid button.active{border-color:#2563eb;background:linear-gradient(145deg,#eaf5ff,#f7fcff);box-shadow:0 13px 30px rgba(37,99,235,.13)}
+.task-grid button.active:after{content:'✓ ausgewählt';position:absolute;left:14px;bottom:14px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#087956}
+.step-copy b{font-size:19px}
+
+/* Model highlights + privacy signals */
+.model-card.model-highlight{position:relative;border:2px solid #a6cfea;background:linear-gradient(155deg,#ffffff 0%,#f3f9ff 100%);box-shadow:0 12px 32px rgba(24,87,134,.08)}
+.model-card.model-highlight:hover{border-color:#5fa5d5;box-shadow:0 20px 46px rgba(24,87,134,.15)}
+.editorial-highlight{display:inline-flex;align-items:center;width:max-content;margin-top:13px;padding:6px 9px;border-radius:999px;background:linear-gradient(90deg,#eaf4ff,#eafaf4);border:1px solid #cfe2f1;color:#155f9f;font-size:10px;font-weight:800;letter-spacing:.02em}
+.privacy-chip{background:#eef9f5!important;color:#087658!important;border:1px solid #d1eadf}
+.model-legend{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 22px}
+.model-legend>div{border:1px solid #dce8f0;border-radius:15px;background:#f9fcfe;padding:13px 15px}
+.model-legend b{display:block;font-size:12px;color:#194e78;margin-bottom:4px}
+.model-legend span{display:block;font-size:11px;line-height:1.5;color:#6c8093}
+.model-legend a{color:#155f9f;font-weight:700}
+.privacy-panel{margin:34px 0;padding:23px;border:1px solid #cfe5dd;border-radius:18px;background:linear-gradient(145deg,#f2fbf7,#fff)}
+.privacy-panel h2{margin-top:7px}.privacy-panel p{margin-bottom:10px}
+@media(max-width:760px){.model-legend{grid-template-columns:1fr}.audience-card{padding-bottom:50px}.task-grid button{min-height:125px}}
