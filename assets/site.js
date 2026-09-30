@@ -82,23 +82,42 @@ function apply(){
   if(q('#modelGrid[data-home-finder="true"]'))return renderHome();
   let n=0; qa('.model-card').forEach(c=>{const ok=matches(c);c.classList.toggle('hidden',!ok);if(ok)n++});count(n);
 }
+function syncActive(){
+  const cat=selected('category'), ctx=selected('context');
+  qa('[data-category-pick]').forEach(b=>b.classList.toggle('active',b.dataset.categoryPick===cat));
+  qa('[data-context-pick]').forEach(b=>b.classList.toggle('active',b.dataset.contextPick===ctx));
+}
 function bind(){
-  ['search','provider','category','context','license'].forEach(id=>q('#'+id)?.addEventListener(id==='search'?'input':'change',apply));
-  qa('[data-category-pick]').forEach(b=>b.addEventListener('click',()=>{q('#category').value=b.dataset.categoryPick;apply()}));
-  qa('[data-context-pick]').forEach(b=>b.addEventListener('click',()=>{q('#context').value=b.dataset.contextPick;apply()}));
-  qa('[data-reset-pick]').forEach(b=>b.addEventListener('click',()=>{if(q('#search'))q('#search').value='';['provider','category','context','license'].forEach(id=>{if(q('#'+id))q('#'+id).value='all'});apply()}));
+  ['search','provider','category','context','license'].forEach(id=>q('#'+id)?.addEventListener(id==='search'?'input':'change',()=>{syncActive();apply()}));
+  qa('[data-category-pick]').forEach(b=>b.addEventListener('click',()=>{if(q('#category'))q('#category').value=b.dataset.categoryPick;syncActive();apply()}));
+  qa('[data-context-pick]').forEach(b=>b.addEventListener('click',()=>{if(q('#context'))q('#context').value=b.dataset.contextPick;syncActive();apply()}));
+  qa('[data-reset-pick]').forEach(b=>b.addEventListener('click',()=>{if(q('#search'))q('#search').value='';['provider','category','context','license'].forEach(id=>{if(q('#'+id))q('#'+id).value='all'});syncActive();apply()}));
 }
 function params(){
   const p=new URLSearchParams(location.search);
   ['provider','category','context','license'].forEach(id=>{const v=p.get(id),e=q('#'+id);if(v&&e&&[...e.options].some(o=>o.value===v))e.value=v});
   if(p.get('q')&&q('#search'))q('#search').value=p.get('q');
 }
+function normalizeGlobalNav(){
+  const nav=q('.nav');
+  if(nav)nav.innerHTML='<a href="/modelle/">Modelle</a><a href="/#finder">Modellfinder</a><a href="/wissen/">Wissen</a><a href="/methodik/">Methodik</a>';
+  const cta=q('.nav-cta'); if(cta){cta.href='/#finder';cta.textContent='Passendes Modell finden';}
+  qa('.footer-links').forEach(f=>f.innerHTML='<a href="/modelle/">Modelle</a><a href="/wissen/">Wissen</a><a href="/methodik/">Methodik</a><a href="/">Start</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a>');
+}
 async function init(){
+  normalizeGlobalNav();
   document.querySelectorAll('a[href="/#privat"]').forEach(a=>a.href='/modelle/?context=local');
   document.querySelectorAll('a[href="/#unternehmen"]').forEach(a=>a.href='/modelle/?context=enterprise');
   injectFinderStyles();
   patchFinder();
   try{const r=await fetch('/data/models.json',{cache:'no-store'});models=await r.json()}catch(e){models=[]}
-  enrichStaticCards(); params(); bind(); apply();
+  enrichStaticCards(); params(); bind(); syncActive(); apply();
 }
 init();
+qa('[data-knowledge-filter]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const value=btn.dataset.knowledgeFilter;
+    qa('[data-knowledge-filter]').forEach(b=>b.classList.toggle('active',b===btn));
+    qa('[data-knowledge-category]').forEach(card=>card.classList.toggle('hidden',value!=='all'&&card.dataset.knowledgeCategory!==value));
+  });
+});
