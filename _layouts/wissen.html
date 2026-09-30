@@ -1,16 +1,15 @@
 <!doctype html>
 <html lang="de"><head>
-{% assign matches = site.data.wissen | where: "slug", page.article %}{% assign article = matches[0] %}
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{{ article.title | escape }} | OpenWeightModelle</title>
-<meta name="description" content="{{ article.description | escape }}">
+<title>{{ page.title | escape }} | OpenWeightModelle</title>
+<meta name="description" content="{{ page.description | escape }}">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://openweightmodelle.de{{ page.url }}">
 <link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/enhancements.css">
 <meta property="og:type" content="article"><meta property="og:locale" content="de_DE"><meta property="og:site_name" content="OpenWeightModelle">
-<meta property="og:title" content="{{ article.title | escape }}"><meta property="og:description" content="{{ article.description | escape }}"><meta property="og:url" content="https://openweightmodelle.de{{ page.url }}">
+<meta property="og:title" content="{{ page.title | escape }}"><meta property="og:description" content="{{ page.description | escape }}"><meta property="og:url" content="https://openweightmodelle.de{{ page.url }}">
 <meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":{{ article.title | jsonify }},"description":{{ article.description | jsonify }},"datePublished":"2026-09-30","dateModified":"2026-09-30","inLanguage":"de-DE","publisher":{"@type":"Organization","name":"OpenWeightModelle","url":"https://openweightmodelle.de/"},"mainEntityOfPage":"https://openweightmodelle.de{{ page.url }}"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"datePublished":"2026-09-30","dateModified":"2026-09-30","inLanguage":"de-DE","publisher":{"@type":"Organization","name":"OpenWeightModelle","url":"https://openweightmodelle.de/"},"mainEntityOfPage":"https://openweightmodelle.de{{ page.url }}"}</script>
 </head><body>
 <div class="topnote"><div class="container"><span>Stand: 30. September 2026 · Source-first Referenz</span><span>50 dokumentierte Open-Weight-Modelle · Keine bezahlten Rankings</span></div></div>
 <header class="header"><div class="container">
@@ -20,19 +19,18 @@
 </div></header>
 <main>
 <section class="knowledge-hero article-knowledge-hero"><div class="container">
-<div class="breadcrumbs"><a href="/">Start</a><span>›</span><a href="/wissen/">Wissen</a><span>›</span>{{ article.short_title | escape }}</div>
-<div class="kicker">{{ article.category | escape }}</div>
-<h1>{{ article.title | escape }}</h1><p>{{ article.description | escape }}</p>
+<div class="breadcrumbs"><a href="/">Start</a><span>›</span><a href="/wissen/">Wissen</a><span>›</span>{{ page.short_title | escape }}</div>
+<div class="kicker">{{ page.category | escape }}</div><h1>{{ page.title | escape }}</h1><p>{{ page.description | escape }}</p>
 <div class="knowledge-meta"><span>Stand: 30. September 2026</span><span>Open-Weight-Wissen</span><span>Primärquellen verlinkt</span></div>
 </div></section>
 <section class="article"><div class="container article-grid"><article class="content knowledge-content">
-<div class="answerbox geo-answer"><strong>Kurzantwort</strong><p>{{ article.direct | escape }}</p></div>
-{{ article.body | markdownify }}
+<div class="answerbox geo-answer"><strong>Kurzantwort</strong><p>{{ page.direct | escape }}</p></div>
+{{ content }}
 <h2 id="praxis">Was bedeutet das in der Praxis?</h2>
 <p>Open-Weight-Modelle sollten nie nur nach einem einzelnen Merkmal ausgewählt werden. Modellgröße, Architektur, Quantisierung, Lizenz, Kontext und Hardware greifen ineinander. Für eine konkrete Entscheidung sind eigene Testaufgaben deshalb wichtiger als eine einzelne Rangliste.</p>
 <p>Mit dem <a href="/#finder"><b>Modellfinder</b></a> kannst du passende Modelle zunächst nach Einsatz und Infrastruktur eingrenzen. Auf den Modellprofilen findest du anschließend Hardware-, Lizenz- und Quellenhinweise.</p>
 <h2 id="quellen">Primärquellen und Dokumentation</h2><div class="source-list">
-{% for source in article.sources %}<a class="source-link" href="{{ source.url }}" target="_blank" rel="noopener noreferrer">{{ source.name | escape }} ↗</a>{% endfor %}
+{% for source in page.sources %}<a class="source-link" href="{{ source.url }}" target="_blank" rel="noopener noreferrer">{{ source.name | escape }} ↗</a>{% endfor %}
 </div>
 <h2 id="faq">Häufige Fragen</h2>
 <div class="faq-item"><h3>Gilt diese Einordnung für alle Open-Weight-Modelle?</h3><p>Die technischen Grundprinzipien sind allgemein, konkrete Details unterscheiden sich aber je nach Modellfamilie, Lizenz und Runtime. Maßgeblich sind deshalb immer die Primärquellen der jeweiligen Modellversion.</p></div>
